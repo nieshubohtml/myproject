@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>收货</title>
+
+  <link rel="stylesheet" href="../fonts/iconfont.css" />
+  <link rel="stylesheet" href="../css/ydui.css">
+  <!-- <link rel="stylesheet" href="../css/shouhuo.css" /> -->
+  <link rel="stylesheet" href="../css/demo.css">
+  <script src="https://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery-cookie/1.4.0/jquery.cookie.js"></script>
+  <script src="../js/ydui.flexible.js"></script>
+</head>
+
+<body>
+  <p class="tan"
+    style="width: 3.5rem;height:1rem;background: #000;position: absolute;top:40%;left:30%;color: white;text-align: center;line-height: 1rem;font-size: 0.3rem;display: none;">
+  </p>
+  <header style="height:1rem;
+  display: flex;
+  font-size:0.3rem;
+  background: #303030;
+  color: #f4f0f0;
+  align-items: center;
+  justify-content: space-between;
+  padding:0 0.14rem;">
+    <span class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu- fh">
+    </span>
+    <h3 style="font-size: 0.4rem;
+    font-weight: normal;">
+      收货信息管理
+    </h3>
+    <span class="btn">
+      保存
+    </span>
+  </header>
+
+  <section style="  flex: 1;
+  overflow: auto;">
+    <figure style='height: 1rem;
+    display: flex;
+    padding-left: 0.24rem;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.02rem solid #d8d8d8;'>
+      <figcaption style='font-size: 0.3rem;'>
+        收货人
+      </figcaption>
+      <input class='name' style='font-size: 0.3rem; border: 0;' type="text" placeholder="请输入姓名" />
+      <span></span>
+    </figure>
+    <figure style='height: 1rem;
+    display: flex;
+    padding-left: 0.24rem;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.02rem solid #d8d8d8;'>
+      <figcaption style='font-size: 0.3rem;'>
+        联系电话
+      </figcaption>
+      <input class='phone' style='font-size: 0.3rem; border: 0;' type="text" placeholder="请输入联系电话" />
+      <span></span>
+    </figure>
+    <figure>
+      <p>
+        <div class="m-cell">
+          <div class="cell-item">
+            <div class="cell-left">所在地区：</div>
+            <div class="cell-right cell-arrow">
+              <input type="text" class="cell-input" readonly id="J_Address" placeholder="请选择收货地址">
+            </div>
+          </div>
+        </div>
+      </p>
+    </figure>
+    <form action="" style='height: 2.2rem;
+    border-bottom: 0.02rem solid #d8d8d8;
+    display: flex;
+    align-items: center;'>
+      <textarea style="  height: 1.8rem;
+      padding-left: 0.24rem;
+      width: 100%;
+      border: 0;
+      outline: 0;
+      font-size: 0.3rem;
+      color: #333333;
+      overflow: hidden;" class='adr' placeholder="请填写详细地址"></textarea>
+    </form>
+  </section>
+  <script type="text/javascript" src="../js/ydui.citys.js"></script>
+  <script type="text/javascript" src="../js/ydui.js"></script>
+  <script>
+    /**
+ * 默认调用
+ */
+    !function () {
+      var $target = $('#J_Address');
+
+      $target.citySelect();
+
+      $target.on('click', function (event) {
+        event.stopPropagation();
+        $target.citySelect('open');
+      });
+
+      $target.on('done.ydui.cityselect', function (ret) {
+        $(this).val(ret.provance + ' ' + ret.city + ' ' + ret.area);
+      });
+    }();
+
+    //弹窗
+    function timers2(text) {
+      let time2 = new Date().setSeconds(new Date().getSeconds() + 2);
+      let timer = setInterval(function () {
+        let now = new Date();
+        let s2 = time2 - now;
+        let djs2 = new Date(s2);
+        $(".tan").css("display", "block");
+        $(".tan").html(text);
+        if (djs2.getSeconds() == 0) {
+          clearInterval(timer);
+          $(".tan").css("display", "none");
+        }
+      }, 100);
+    }
+
+    var span = document.querySelector(".fh");
+    span.onclick = function () {
+      // location.href = "myset.html";
+      window.history.go(-1);
+    };
+    $('.btn').click(function () {
+      console.log($('#J_Address').val())
+      var name = $('.name').val()
+      if (name == '') {
+        timers2('请输入姓名')
+        return
+      }
+      var phone = $('.phone').val()
+      if ($('#J_Address').val() == '') {
+        timers2('请输入地址')
+        return
+      }
+      if (!(/^1[3456789]\d{9}$/.test(phone))) {
+        timers2('请输入正确的手机号')
+        return
+      }
+      $.ajax({
+        url: "http://localhost:3000/api/v1/addresses",
+        type: "post",
+        // traditional: true,
+        headers: {
+          authorization: 'Bearer ' + $.cookie("token"),
+        },
+        data: {
+          receiver: name,
+          mobile: phone,
+          regions: $('#J_Address').val(),
+          address: $('.adr').val(),
+          idDefault: true
+        },
+        success: function (res) {
+          timers2('添加成功')
+          console.log(res);
+          window.location.href = "shouhuoDZ.html";
+        },
+        error: function (err) {
+          console.log(err);
+        }
+      });
+    })
+  </script>
+</body>
+
+</html>

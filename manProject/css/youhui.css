@@ -1,0 +1,144 @@
+body,
+form,
+img,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+dl,
+dt,
+dd,
+a,
+figure,
+figcaption,
+form,
+input {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    font-size: 26.667vw
+}
+
+body,
+html {
+    height: 100%
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* 头部 */
+header {
+    height: 0.64rem;
+    display: flex;
+    font-size: 0.16rem;
+    background: #303030;
+    color: #f4f0f0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.14rem;
+}
+
+header h3 {
+    font-size: 0.18rem;
+    font-weight: normal;
+}
+
+section {
+    flex: 1;
+    overflow: auto;
+    background: #d8d8d8;
+}
+
+section nav {
+    height: 0.4rem;
+    display: flex;
+    padding: 0 0.14rem;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+
+section nav li {
+    font-size: 0.14rem;
+    color: #333333;
+}
+
+section nav span{
+    display: block;
+    margin-top:0.05rem;
+    height: 0.02rem;
+    background: #fff;
+}
+
+li:hover {
+    color: #ee8300;
+}
+li:hover span{
+    background:#ee8300;
+}
+
+
+
+section .quan {
+    height: 0.8rem;
+    display: flex;
+    font-size: 0.16rem;
+    justify-content: center;
+    margin-top: 0.15rem;
+}
+section .quan .quan-a {
+    width: 2.4rem;
+    background: url(../img/Fill3.png) no-repeat;
+    background-size: 100% 100%;
+    padding: 0.12rem 0 0 0.2rem;
+}
+section .quan-a p {
+    font-size: 0.12rem;
+    color: #333333;
+}
+
+section .quan-a p:nth-of-type(1) {
+    font-size: 0.16rem;
+    color: #ee8300;
+    margin-bottom: 0.05rem;
+}
+section .quan .quan-b {
+    width: 0.8rem;
+    background: url(../img/Fill1.png) no-repeat;
+    background-size: 100% 100%;
+    padding: 0.12rem 0 0 0.1rem;
+}
+
+section .quan-b p:nth-of-type(1) {
+    font-size: 0.2rem;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 0.06rem;
+}
+
+section .quan-b p:nth-of-type(2) {
+    height: 0.2rem;
+    background: #fff;
+    border-radius: 0.1rem;
+    width: 0.7rem;
+    font-size: 0.14rem;
+    color: #ee8300;
+    text-align: center;
+    border: 1.5px solid #f0b018;
+}

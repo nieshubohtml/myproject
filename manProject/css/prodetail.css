@@ -1,0 +1,218 @@
+html,
+body,
+ul,
+li,
+dl,
+dt,
+dd,
+p,
+figure,
+figcaption,
+h1,
+h2,
+h3,
+h4,
+form {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    border: 0;
+}
+
+h2,
+h3,
+h1,
+h4,
+h5,
+h6,
+b {
+    font-weight: normal;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+}
+
+header {
+    height: 1.59rem;
+    background: url(../img/gp1.png) no-repeat center/cover;
+
+}
+
+header .head {
+    height: 0.64rem;
+    margin: 0 0.13rem;
+    /* background: #fff; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .head h2 {
+    width: 0.24rem;
+    height: 0.24rem;
+    border-radius: 12rem;
+    background-color: #333333;
+
+
+}
+
+header .head h2 span {
+    position: relative;
+    top: -1.43rem;
+    left: 0.04rem;
+}
+
+header .head h2 .iconfont {
+    color: #fff;
+    font-size: 0.16rem;
+}
+
+section {
+    flex: 1;
+    overflow: auto;
+    font-size: 0.12rem;
+}
+
+section article .content {
+
+    margin: 0 0.16rem;
+}
+
+section article .content h2 {
+    margin-top: 0.43rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.14rem;
+}
+
+section article .content h2 span {
+    display: block;
+    height: 0.14rem;
+}
+
+section article .content .txt {
+    margin: 0.16rem 0 0.17rem 0;
+    font-size: 0.12rem;
+    color: #333333;
+}
+
+section article .content h3 {
+    font-weight: normal;
+    font-size: 0.12rem;
+    color: #333333;
+    margin-right: 0.04rem;
+    margin-bottom: 0.12rem;
+    width:0.44rem;
+    box-sizing: border-box;
+}
+
+section article:nth-child(1) {
+    border-bottom: 0.01rem solid #f7f7f7;
+}
+
+section article:nth-child(2) {
+    border-bottom: 0.04rem solid #f7f7f7;
+}
+
+article .content .title {
+    height: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.14rem;
+    color: #333333;
+}
+
+article .content .title b {
+    margin-right: 0.05rem;
+}
+
+article .content .title .iconfont {
+    color: #333333;
+    font-size: 0.16rem;
+}
+
+article .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: #f7f7f7;
+}
+
+article .list li {
+    height: 1.58rem;
+    width: 1.86rem;
+    background: #fff;
+    border-bottom: 0.04rem solid #f7f7f7;
+    text-align: center;
+}
+
+article .list li span {
+    width:0.86rem;
+    display: inline-block;
+    vertical-align: middle;
+    height:0.82rem;
+
+}
+
+article .list li p {
+    margin-top: 0.15rem;
+    font-size: 0.12rem;
+    height: 0.28rem;
+    text-align: left;
+    margin-left: 0.15rem;
+    width: 1.4rem;
+
+}
+
+article .list li b {
+    display: flex;
+    text-align: left;
+    margin-left: 0.15rem;
+    width: 1.51rem;
+    font-size: 0.16rem;
+    color: #e68f04;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.05rem;
+
+}
+
+article .list li b i {
+    font-style: normal;
+    font-size: 0.12rem;
+    color: #333333;
+    font-family: "Ping Fang SC";
+}
+article .list li span img{
+    width:100%;
+    height:100%;
+}
+
+/* 底部栏 */
+footer {
+    height: 0.34rem;
+    display: flex;
+    justify-content: center;
+    
+}

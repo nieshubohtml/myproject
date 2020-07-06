@@ -1,0 +1,63 @@
+header {
+  height: 0.55rem;
+  font-size: 0.18rem;
+  background-color: #303030;
+  padding-left: 0.1rem; }
+  header .head {
+    width: 50%;
+    height: 100%;
+    color: #f4f0f0;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    header .head .iconfont {
+      font-size: 0.16rem; }
+
+nav {
+  height: 0.4rem;
+  font-size: 0.14rem;
+  color: #333; }
+  nav ul {
+    height: 100%;
+    width: 1.88rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    nav ul li {
+      display: inline-block;
+      height: 0.22rem; }
+    nav ul li:hover {
+        color: #f1a03f;
+        border-bottom: 1px solid #f1a03f; }
+
+section {
+  background: #d8d8d8; }
+  section .shop {
+    height: 2.2rem;
+    background: white;
+    margin-top: 0.02rem;
+    padding: 0.2rem 0.1rem 0.1rem 0.15rem; }
+    section .shop .pic {
+      width: 3.45rem;
+      height: 1.55rem;
+      background: url(../img/bj.png) no-repeat center/cover; }
+    section .shop .pic2 {
+      width: 3.45rem;
+      height: 1.55rem;
+      background: url(../img/bj2.png) no-repeat center/cover; }
+    section .shop .pic3 {
+      width: 3.45rem;
+      height: 1.55rem;
+      background: url(../img/bj2.png) no-repeat center/cover; }
+    section .shop p {
+      font-size: 0.14rem;
+      color: #333333;
+      margin: 0.1rem 0 0.15rem; }
+    section .shop span {
+      font-size: 0.12rem;
+      color: #ccc;
+      float: left; }
+    section .shop .time {
+      float: right; }

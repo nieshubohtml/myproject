@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的订单</title>
+    <link rel="stylesheet" href="../css/orders.css">
+    <link rel="stylesheet" href="../fonts/iconfont.css">
+    <script src="../js/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <span class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu- fh"></span>
+        <h2>我的订单</h2>
+        <span></span>
+    </header>
+
+    <section>
+        <nav>
+            <figure>
+                <a href="#">全部</a>
+                <span></span>
+            </figure>
+            <figure>
+                <a href="#">待付款</a>
+                <span></span>
+            </figure>
+            <figure>
+                <a href="#">待发货</a>
+                <span></span>
+            </figure>
+            <figure>
+                <a href="#">待收货</a>
+                <span></span>
+            </figure>
+            <figure>
+                <a href="#">待评价</a>
+                <span></span>
+            </figure>
+        </nav>
+        <article></article>
+
+
+        <!-- 全部订单 -->
+        <div class='box'>
+            <div class='passage'>
+                <div class='title-a'>
+                    <p>凌晨两点<span class='iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-1'></span></p>
+                    <p>等待付款中</p>
+                </div>
+
+                <div class='passage-a'>
+                    <img src="../img/dd-1.png" alt="" />
+
+                    <div class='passage-b'>
+                        <h3>新款开衫连帽男士卫衣 <span>￥199.0</span></h3>
+                        <p><span>黄色</span><span>3XL</span><span>数量1</span></p>
+
+
+                        <h3>共1件商品 <span>合计：￥199.0</span></h3>
+                    </div>
+
+                </div>
+            </div>
+            <div class='click'></div>
+
+            <div class='Pay'>
+                <p>取消订单</p>
+                <p>付款</p>
+            </div>
+
+            <article></article>
+
+
+            <!-- 第二种 -->
+            <div class='passage'>
+                <div class='title-a'>
+                    <p>风中原创<span class='iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-1'></span></p>
+                    <p>已完成交易</p>
+                </div>
+
+                <div class='passage-a'>
+                    <img src="../img/dd-2.png" alt="" />
+
+                    <div class='passage-b'>
+                        <h3>哆啦A梦联名秋款男... <span>￥165.0</span></h3>
+                        <p><span>绿色</span><span>2XL</span><span>数量1</span></p>
+
+
+                        <h3>共1件商品 <span>合计：￥165.0</span></h3>
+                    </div>
+
+                </div>
+            </div>
+            <div class='click'></div>
+
+            <div class='Pay'>
+                <p>删除订单</p>
+            </div>
+
+            <article></article>
+
+        </div>
+
+        <!-- 待付款 -->
+        <div class='box' style='display: none'>
+            <div class='passage'>
+                <div class='title-a'>
+                    <p>凌晨两点<span class='iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-1'></span></p>
+                    <p>等待付款中</p>
+                </div>
+
+                <div class='passage-a'>
+                    <img src="../img/dd-1.png" alt="" />
+
+                    <div class='passage-b'>
+                        <h3>新款开衫连帽男士卫衣 <span>￥199.0</span></h3>
+                        <p><span>黄色</span><span>3XL</span><span>数量1</span></p>
+
+
+                        <h3>共1件商品 <span>合计：￥199.0</span></h3>
+                    </div>
+
+                </div>
+            </div>
+            <div class='click'></div>
+
+            <div class='Pay'>
+                <p>取消订单</p>
+                <p>付款</p>
+            </div>
+
+            <article></article>
+        </div>
+
+        <!-- 代发货 -->
+
+        <div class='box' style='display: none'>
+
+        </div>
+
+
+        <!-- 待收货 -->
+        <div class='box' style='display: none'>
+
+        </div>
+
+        <!-- 待评价 -->
+
+        <div class='box' style='display: none'>
+            <div class='passage'>
+                <div class='title-a'>
+                    <p>风中原创<span class='iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-1'></span></p>
+                    <p>已完成交易</p>
+                </div>
+
+                <div class='passage-a'>
+                    <img src="../img/dd-2.png" alt="" />
+
+                    <div class='passage-b'>
+                        <h3>哆啦A梦联名秋款男... <span>￥165.0</span></h3>
+                        <p><span>绿色</span><span>2XL</span><span>数量1</span></p>
+
+
+                        <h3>共1件商品 <span>合计：￥165.0</span></h3>
+                    </div>
+
+                </div>
+            </div>
+            <div class='click'></div>
+
+            <div class='Pay'>
+                <p>删除订单</p>
+            </div>
+
+            <article></article>
+
+        </div>
+
+
+
+    </section>
+    <script>
+        $('figure a').eq(0).css({ color: '#eda852' })
+        $('figure span').eq(0).css({ background: '#eda852' })
+
+
+
+
+        //返回前一页
+        var span = document.querySelector('.fh')
+        span.onclick = function () {
+            location.href = 'myset.html'
+        }
+
+
+        // 导航切换
+        var fig = $('nav figure')
+        console.log(fig)
+        for (let i = 0; i < fig.length; i++) {
+            $('figure a').eq(i).click(function () {
+                $('.box').css({ display: 'none' })
+                $('.box').eq(i).css({ display: 'block' })
+
+                //重置样式
+                for (let j = 0; j < fig.length; j++) {
+                    $('figure a').eq(j).css({ color: '#333' })
+                    $('figure span').eq(j).css({ background: '#fff' })
+                }
+
+                $('figure a').eq(i).css({ color: '#eda852' })
+                $('figure span').eq(i).css({ background: '#eda852' })
+            })
+        }
+
+
+        //选中
+
+        // $('figure a').eq(3).click(),简写方法
+
+        //获取传过来的id;
+        var search = window.location.search;
+        if (search.split('?').length == 2) {
+            var str = search.split('?')[1];
+        }
+
+
+
+        $('figure a').eq(str).trigger("click")
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script>
+        window.onload = function () {
+            getRem(375, 100)
+        };
+        window.onresize = function () {
+            getRem(375, 100)
+        };
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+    <link rel="stylesheet" href="../fonts/iconfont.css">
+    <link rel="stylesheet" href="../css/prodetail.css">
+</head>
+
+<body>
+    <header>
+        <div class="head">
+            <h2><span class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-" id="return"></span></h2>
+            <h2><span class="iconfont icon-fangdajing"></span></h2>
+        </div>
+    </header>
+    <section>
+        <article>
+            <div class="content">
+                <h2>
+                    <p>Clamisgold</p><span><img src="../img/xingzhuang.png" alt=""></span>
+                </h2>
+                <p class="txt">来自江湖的街头潮牌Clamisgold，设计上在许多图文的编制与颜色配置上大胆，精准地抓住每个风格中的经典元素，...</p>
+                <h3 class="unfold">
+                    <b>展开 ∨</b>
+                    <!-- <span class="iconfont icon-toBottom-fill"></span> -->
+                </h3>
+            </div>
+        </article>
+        <article>
+            <div class="content">
+                <div class="title">
+                    <p>当季潮流</p>
+                    <h4><b>价格 ∨</b></h4>
+                    <span class="box"><b>筛选</b><span class="iconfont icon-iconfontzhizuobiaozhun023125"></span></span>
+                </div>
+            </div>
+        </article>
+        <article>
+            <ul class="list">
+                <li>
+                    <span><img src="../img/gp-6.png" alt=""></span>
+                    <p>潮牌街头复古运动卫衣</p>
+                    <b>￥89<i>603付款</i></b>
+                </li>
+                <li>
+                    <span><img src="../img/gp-6.png" alt=""></span>
+                    <p>潮牌街头复古运动卫衣潮牌街头复古运动...</p>
+                    <b>￥99<i>603付款</i></b>
+                </li>
+                <li>
+                    <span><img src="../img/gp-6.png" alt=""></span>
+                    <p>潮牌街头复古运动卫衣</p>
+                    <b>￥189<i>603付款</i></b>
+                </li>
+                <li>
+                    <span><img src="../img/gp-6.png" alt=""></span>
+                    <p>潮牌街头复古运动卫衣</p>
+                    <b>￥99<i>603付款</i></b>
+                </li>
+                <li>
+                    <span><img src="../img/gp-6.png" alt=""></span>
+                    <p>潮牌街头复古运动卫衣</p>
+                    <b>￥139<i>603付款</i></b>
+                </li>
+                <li>
+                    <span><img src="../img/gp-6.png" alt=""></span>
+                    <p>潮牌街头复古运动卫衣</p>
+                    <b>￥129<i>603付款</i></b>
+                </li>
+            </ul>
+        </article>
+    </section>
+    <footer>
+
+    </footer>
+
+    <script>
+        // 返回上一页
+        $('#return').click(function () {
+            console.log(1);
+            window.history.go(-1)
+
+        })
+        var i = 0;
+        $('.unfold').click(function () {
+            if(i++%2 == 0){
+                $('.unfold').html('收起 ∧')
+                $('.txt').html('来自江湖的街头潮牌Clamisgold，设计上在许多图文的编制与颜色配置上大胆，精准地抓住每个风格中的经典元素，推出众多令人惊艳的商品')
+            }else{
+                $('.unfold').html('展开 ∨')
+                $('.txt').html('来自江湖的街头潮牌Clamisgold，设计上在许多图文的编制与颜色配置上大胆，精准地抓住每个风格中的经典元素，...')
+            }
+        })
+    </script>
+</body>
+
+</html>

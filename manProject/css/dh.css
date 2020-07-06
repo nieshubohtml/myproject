@@ -1,0 +1,111 @@
+body,
+form,
+img,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+dl,
+dt,
+dd,
+a,
+figure,
+figcaption,
+form,
+input {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    font-size: 26.667vw
+}
+
+body,
+html {
+    height: 100%
+}
+
+/* body {
+    display: flex;
+    flex-direction: column;
+} */
+.swiper-container .tg {
+    font-size: 0.12rem;
+    color: #ffffff;
+    position: absolute;
+    right: 0.2rem;
+    top: 0.28rem;
+    z-index: 10;
+}
+
+/* 轮播图大小*/
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.swiper-wrapper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #fff;
+}
+
+
+
+/* 引导图3 */
+section div {
+    width: 1.19rem;
+    height: 0.95rem;
+    position: absolute;
+    top: 1.25rem;
+    left: 1.28rem;
+    background: url('../img/logo.png') no-repeat center/cover;
+}
+
+section p {
+    font-size: 0.14rem;
+    letter-spacing: 0.13rem;
+    color: #ffffff;
+    position: absolute;
+}
+
+#p1 {
+    top: 3.36rem;
+    left: 0.15rem;
+}
+
+#p2 {
+    top: 3.89rem;
+    left: 1.28rem;
+}
+
+button {
+    width: 2.46rem;
+    height: 0.31rem;
+    border-radius: 0.02rem;
+    background-color: #b19876;
+    border: 0;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    position: absolute;
+    left: 0.65rem;
+    bottom: 0.97rem;
+    outline: 0;
+}

@@ -1,0 +1,94 @@
+body,
+form,
+img,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+dl,
+dt,
+dd,
+a,
+figure,
+figcaption,
+form,
+input {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 26.667vw;
+}
+body,
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 头部 */
+header {
+  display: flex;
+  height: 0.64rem;
+  background-color: #303030;
+  font-size: 0.18rem;
+  color: #f4f0f0;
+  align-items: center;
+  padding: 0 0.14rem;
+  justify-content: space-between;
+}
+header h2 {
+  font-weight: normal;
+  font-size: 0.18rem;
+}
+header .iconfont {
+  font-size: 0.16rem;
+}
+
+section {
+  flex: 1;
+  overflow: auto;
+}
+section article {
+  height: 0.34rem;
+  border-bottom: 1px solid #d8d8d8;
+  font-size: 0.14rem;
+  color: #333333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.14rem;
+}
+section article .iconfont {
+  font-size: 0.12rem;
+  color: rgba(51, 51, 51, 0.5);
+}
+section article:nth-of-type(2) {
+  border-bottom: 0.07rem solid #d8d8d8;
+}
+section article:nth-of-type(5) {
+  border-bottom: 0.07rem solid #d8d8d8;
+}
+
+footer {
+  height: 0.56rem;
+  background-color: #dcba8c;
+}
+footer p {
+  font-size: 0.16rem;
+  color: #ffffff;
+  text-align: center;
+  line-height: 0.56rem;
+}

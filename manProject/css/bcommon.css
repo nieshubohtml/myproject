@@ -1,0 +1,66 @@
+header {
+  height: 0.64rem;
+  font-size: 0.18rem;
+  background-color: #303030;
+  padding-left: 0.1rem; }
+  header .head {
+    width: 50%;
+    height: 100%;
+    color: #f4f0f0;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    header .head .iconfont {
+      font-size: 0.2rem; }
+
+section {
+  padding: 0 0.15rem; }
+
+footer {
+  height: 0.5rem;
+  font-size: 0.12rem;
+  color: #333;
+  border-top: 0.01rem solid #ccc;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  footer input {
+    border: 0;
+    width: 1.17rem;
+    height: .27rem;
+    border-radius: 2px;
+    background-color: rgba(51, 51, 51, 0.0784314);
+    border: 0.01rem solid #000;
+    font-size: 0.1rem;
+    padding-left: 0.16rem; }
+  footer .lo {
+    width: 50%; }
+    footer .lo ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 90%; }
+      footer .lo ul li {
+        text-align: center; }
+        footer .lo ul li .iconfont {
+          font-size: 0.2rem; }
+        footer .lo ul li .xg {
+          width: .64rem;
+          height: .24rem;
+          border-radius: 2px;
+          background-color: #333333;
+          color: #fff;
+          text-align: center;
+          line-height: 0.22rem;
+          position: relative; }
+          footer .lo ul li .xg p {
+            width: 0.15rem;
+            height: 0.15rem;
+            border-radius: 50%;
+            background: #f00;
+            position: absolute;
+            top: -0.06rem;
+            right: -0.06rem;
+            text-align: center;
+            line-height: 0.15rem; }

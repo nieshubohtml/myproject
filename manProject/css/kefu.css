@@ -1,0 +1,110 @@
+header {
+  height: 0.55rem;
+  font-size: 0.18rem;
+  background-color: #303030;
+  padding-left: 0.1rem;
+}
+header .head {
+  width: 50%;
+  height: 100%;
+  color: #f4f0f0;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .head .iconfont {
+  font-size: 0.16rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.15rem;
+}
+section time {
+  display: block;
+  width: 1.06rem;
+  height: 0.22rem;
+  border-radius: 11px;
+  background-color: #d8d8d8;
+  text-align: center;
+  line-height: 0.22rem;
+  font-size: 0.12rem;
+  color: #333333;
+  margin: 0.1rem auto 0.15rem;
+}
+section .le .pic {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+}
+section .le .pl {
+  left: 0.1rem;
+  background: url(../img/头像.png) no-repeat center/cover;
+}
+section .le .liao {
+  border-radius: 2px;
+  background-color: #d8d8d8;
+  padding: 0.1rem 0.25rem 0.15rem;
+  width: 1.8rem;
+  min-height: 0.2rem;
+  margin: 0 auto 0.25rem;
+  position: relative;
+  font-size: 0.14rem;
+  color: #333333;
+}
+section .le .liao .sq {
+  position: absolute;
+  border-width: 0.15rem;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #d8d8d8;
+  top: 0.07rem;
+}
+section .le .liao .lsq {
+  transform: rotate(185deg);
+  left: -0.25rem;
+}
+section .ri .right {
+  background: #f7cc99;
+}
+section .ri .right .rsq {
+  transform: rotate(5deg);
+  right: -0.25rem;
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #f7cc99;
+}
+section .ri .right .sq {
+  position: absolute;
+  border-width: 0.15rem;
+  border-style: solid;
+  top: 0.07rem;
+}
+section .ri .pr {
+  right: 0.1rem;
+  background: url(../img/头像.png) no-repeat center/cover;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+footer span {
+  display: inline;
+}
+footer input {
+  display: inline-block;
+  font-size: 0.18rem;
+  width: 2.18rem;
+  height: 0.28rem;
+  border: 0;
+  border: 1px solid #333;
+}
+footer .iconfont {
+  font-size: 0.24rem;
+}
+
+footer {
+  height: 0.55rem;
+}

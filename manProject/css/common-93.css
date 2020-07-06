@@ -1,0 +1,76 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+li {
+	list-style: none;
+}
+
+html,
+body {
+	height: 100%;
+	font-family: "Ping Fang SC";
+}
+
+i {
+	font-style: normal;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+img {
+	display: block;
+}
+
+/* header搜索框 */
+.sousuo {
+	width: 100%;
+	height: 0.64rem;
+	background-color: #303030;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+}
+
+.sousuo p {
+	width: 88%;
+	height: 0.28rem;
+	line-height: 0.28rem;
+	border-radius: 0.14rem;
+	background-color: #ffffff;
+	color: #999797;
+	text-align: center;
+}
+
+/* 页脚 */
+footer {
+	height: 0.5rem;
+	border-top: 1px solid #eeeeee;
+	display: flex;
+	justify-content: space-around;
+	font-size: 0.12rem;
+	text-align: center;
+	align-items: center;
+}
+
+footer figure .iconfont {
+	font-size: 0.2rem;
+}
+
+footer figure a {
+	color: #333333;
+}
+
+a:hover {
+	color: #ecb067
+}

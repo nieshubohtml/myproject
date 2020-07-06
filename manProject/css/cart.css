@@ -1,0 +1,144 @@
+@charset "UTF-8";
+/* 头部 */
+header {
+  display: flex;
+  height: 0.55rem;
+  background: #303030;
+  align-items: center;
+  padding: 0 0.14rem;
+  font-size: 0.2rem;
+  justify-content: space-between; }
+
+header h2 {
+  font-size: 0.2rem;
+  color: #f4f0f0;
+  font-weight: normal; }
+
+header p {
+  font-size: 0.16rem;
+  color: #f4f0f0; }
+
+section {
+  flex: 1;
+  overflow: auto; }
+
+.shop-id {
+  font-size: 0.14rem;
+  display: flex;
+  justify-content: space-between;
+  height: 0.36rem;
+  margin: 0 0.14rem;
+  align-items: center;
+  border-bottom: 0.04rem solid #e3e2e2; }
+
+.shop-a {
+  display: flex;
+  position: relative;
+  align-items: center; }
+
+.shop-a input {
+  width: 0.15rem;
+  height: 0.15rem;
+  border-radius: 50%;
+  border: 1px solid #000;
+  margin-right: 0.13rem; }
+
+.shop-a .iconfont {
+  bottom: -0.01rem;
+  left: -0.01rem;
+  position: absolute;
+  font-size: 0.2rem;
+  color: #f08300;
+  display: none; }
+
+#goods-box {
+  overflow: auto; }
+
+section .goods {
+  height: 1.45rem;
+  display: flex;
+  align-items: center;
+  margin: 0 0.14rem;
+  border-bottom: 0.04rem solid #e3e2e2; }
+
+.goods img {
+  width: 0.96rem; }
+
+.goods .goods-b {
+  display: flex;
+  font-size: 0.14rem;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 0.2rem;
+  width: 2.05rem; }
+
+.goods-b span {
+  width: 0.76rem;
+  height: 0.22rem;
+  border-radius: 2px;
+  background-color: rgba(216, 216, 216, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.goods-b h3 {
+  width: 1.8rem;
+  font-size: 0.14rem;
+  color: #333333;
+  margin-bottom: 0.1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+.goods-b .goods-end {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; }
+
+.goods-b .page i {
+  display: block;
+  width: 0.27rem;
+  height: 0.22rem;
+  border-radius: 0.04rem;
+  background-color: rgba(216, 216, 216, 0.3);
+  text-align: center; }
+
+.goods-b .page b {
+  margin: 0 0.1rem; }
+
+.goods-b .page {
+  display: flex;
+  margin-top: 0.13rem; }
+
+.goods-b .jg {
+  font-size: 0.16rem;
+  color: #f08300; }
+
+article {
+  height: 0.52rem;
+  font-size: 0.14rem;
+  display: flex; }
+
+article .left-end {
+  display: flex;
+  width: 80%;
+  background: #e3e2e2;
+  align-items: center;
+  padding: 0 0.14rem; }
+
+article .left-end .nsb {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.75rem;
+  font-size: 0.14rem; }
+
+article .left-end .nsb span {
+  font-size: 0.12rem; }
+
+article .right-end {
+  width: 20%;
+  background: #f1a03f;
+  color: #fff;
+  font-size: 0.2rem;
+  text-align: center;
+  line-height: 0.52rem; }

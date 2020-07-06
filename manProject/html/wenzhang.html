@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>点击文章</title>
+
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/bcommon.css" />
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../fonts/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../css/wenzhang.css" />
+
+    <script>
+        window.onload = function () {
+            /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+                              为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+            getRem(375, 100)
+        };
+        window.onresize = function () {
+            getRem(375, 100)
+        };
+
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <article class="box">
+            <div class="tbox">
+                <div class="tlb tb">
+                    <img src="../img/jn.png" alt="">
+                </div>
+                <div class="trb tb">
+                    <div class="word">
+                        <p>每 日 搭 配 | 夏 季 新 品</p>
+                        <p>FASHION MIX NEW ARRI</p>
+                    </div>
+                    <div class="bpic">
+                        <img src="../img/y2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </article>
+
+
+        <div class="bbox">
+            <div class="con">
+                <p class="cn"> <span class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></span></p>
+                <p class="cn"> <span class="iconfont icon-13"></span></p>
+            </div>
+
+            <div class="word2">
+                <p>时尚与功能相结合的机能运动风</p>
+                <p class="yd">2017-6-18</p>
+            </div>
+        </div>
+
+    </header>
+    <section>
+
+        <article class="main">
+            <div class="jux"></div>
+            <div class="word3">
+                <h2>
+                    半袖道袍开衫+黑色短袖+黑色中裤 鞋履：黑色韦斯特椰子跑步鞋
+                </h2>
+
+                <p>
+                    机能运动是什么？是指具有专业功能设计的户;机能运动是什么？是指具有专业功能设计的户;
+                    机能运动是什么？是指具有专业功能设计的户;机能运动是什么？
+                    机能运动是什么？是指具有专业功能设计的户;机能运动是什么？
+                </p>
+            </div>
+
+        </article>
+
+        <article class="pict"></article>
+
+    </section>
+
+
+
+
+
+
+
+
+    <footer>
+        <input type="text" placeholder="赶紧参与评论吧~">
+        <div class="lo">
+            <ul>
+                <li>
+                    <p class="iconfont icon-pinglun"></p>32
+                </li>
+                <li>
+                    <p class="iconfont icon-dianzan"></p>88
+                </li>
+                <li>
+                    <div class="xg">相关商品
+                        <p>4</p>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

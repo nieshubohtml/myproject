@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+    <link rel="stylesheet" href="../css/dh.css">
+    <script src="https://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <span class='tg'>跳过</span>
+                <img src="../img/bg1.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <span class='tg'>跳过</span>
+                <img src="../img/bg2.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="../img/boot-93.png" alt="">
+                <section>
+                    <div></div>
+                    <p id="p1">别人决定你的印象</p>
+                    <p id="p2">但决定不了你的形象</p>
+                    <a href="#"><button>升级我的质感</button></a>
+                </section>
+            </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            effect : 'flip',
+            onSlideChangeEnd: function(swiper){
+                var fy = document.querySelector('.swiper-pagination')
+                if(swiper.isEnd){
+                    fy.style.display = 'none'
+                } //切换结束时，告诉我现在是第几个slide
+                else{
+                    fy.style.display = 'block'
+                }
+            },
+        })
+
+
+        $('.tg').click(function(){
+            location.href= 'login.html'
+        })
+        $('button').click(function(){
+            location.href= 'login.html'
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link id="cdlink" rel="stylesheet" type="text/css" href="../css/indexOne.css" />
+    <link rel="stylesheet" type="text/css" href="../css/ccommon.css" />
+
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../fonts/iconfont.css">
+    <script src="https://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+
+    <style>
+        /* 页脚 */
+        footer {
+            height: 0.5rem;
+            border-top: 1px solid #eeeeee;
+            display: flex;
+            justify-content: space-around;
+            font-size: 0.12rem;
+            text-align: center;
+            align-items: center;
+        }
+
+        footer figure .iconfont {
+            font-size: 0.2rem;
+        }
+
+        footer figure a {
+            color: #333333;
+        }
+
+        a:hover {
+            color: #ecb067
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+                              为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+            getRem(375, 100)
+        };
+        window.onresize = function () {
+            getRem(375, 100)
+        };
+
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <article class="head" style="width: 95%;">
+            <p>阅读</p>
+            <span class="iconfont icon-fangdajing"></span>
+        </article>
+    </header>
+    <nav>
+        <ul>
+            <li class="jx">精选</li>
+            <li class="cd">穿搭</li>
+            <li class="lx">流行</li>
+            <li class="hw">好物</li>
+            <li class="fx">发型</li>
+            <li class="sh">生活</li>
+
+        </ul>
+    </nav>
+    <section>
+        <div class='banner'>
+            <img src="../img/pc1.png" alt="">
+        </div>
+
+
+
+        <h3>搭配设计师</h3>
+
+
+        <div class='shejipic'>
+            <div class='pics'>
+                <a href="#">
+                    <img src="../img/1.png" alt="">
+                </a>
+                <p>罗威</p>
+            </div>
+            <div class='pics'>
+                <a href="#">
+                    <img src="../img/2.png" alt="">
+                </a>
+                <p>龙朋</p>
+            </div>
+            <div class='pics'>
+                <a href="#">
+                    <img src="../img/3.png" alt="">
+                </a>
+                <p>钱赫书</p>
+            </div>
+            <div class='pics'>
+                <a href="#">
+                    <img src="../img/4.png" alt="">
+                </a>
+                <p>Raul Kling</p>
+            </div>
+        </div>
+
+
+        <div class='passage'>
+            <a href="#">
+                <img src="../img/style.png" alt="">
+            </a>
+            <p>松垮却有型的休闲穿搭</p>
+
+            <div class='times'>
+                <span>阅读5756</span>
+                <span>2019年07月29日</span>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <figure>
+            <a href="inde.html" style="color:#ecb067">
+                <span class="iconfont icon-shouye"></span>
+                <figcaption>首页</figcaption>
+            </a>
+        </figure>
+        <figure>
+            <a href="jingxuan.html">
+                <span class="iconfont icon-iconset0219"></span>
+                <figcaption>精选</figcaption>
+            </a>
+        </figure>
+        <figure>
+            <a href="classify.html">
+                <span class="iconfont icon-fenlei"></span>
+                <figcaption>分类</figcaption>
+            </a>
+        </figure>
+        <figure>
+            <a href="cart.html">
+                <span class="iconfont icon-buoumaotubiao01"></span>
+                <figcaption>购物车</figcaption>
+            </a>
+        </figure>
+        <figure>
+            <a href="myset.html">
+                <span class="iconfont icon-wode"></span>
+                <figcaption>我的</figcaption>
+            </a>
+        </figure>
+    </footer>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

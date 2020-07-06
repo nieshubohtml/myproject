@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>登录页面</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <link rel="stylesheet" type="text/css" href="../css/login.css" />
+  <link rel="stylesheet" href="../css/common.css" />
+  <link rel="stylesheet" href="../fonts/iconfont.css" />
+  <script src="https://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery-cookie/1.4.0/jquery.cookie.js"></script>
+  <script>
+    window.onload = function () {
+      /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+                             为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+      getRem(375, 100);
+    };
+    window.onresize = function () {
+      getRem(375, 100);
+    };
+
+    function getRem(pwidth, prem) {
+      var html = document.getElementsByTagName("html")[0];
+      var oWidth =
+        document.body.clientWidth || document.documentElement.clientWidth;
+      html.style.fontSize = (oWidth / pwidth) * prem + "px";
+    }
+  </script>
+</head>
+
+<body>
+  <section>
+    <article class="top">
+      <article class="logo"></article>
+    </article>
+
+    <article class="bottom">
+      <div>
+        <span>账号：</span> <input type="tel" class="mail" maxlength="12" />
+      </div>
+      <div>
+        <span>密码：</span><input type="password" class="code" maxlength="12" />
+      </div>
+
+      <button class="login2">登录</button>
+      <p class="register">点击注册</p>
+      <div class="hr"></div>
+      <span class="login">快捷登录</span>
+      <span class="qq ks iconfont icon-weixin"></span>
+      <span class="wx ks iconfont icon-qq"></span>
+      <span class="wb ks iconfont icon-weibo"></span>
+    </article>
+  </section>
+
+  <p class="tan"
+    style="width: 1.5rem;height:0.3rem;background: #000;position: absolute;top:40%;left:30%;color: white;text-align: center;line-height: 0.3rem;font-size: 0.12rem;display: none;">
+  </p>
+  <script src="../js/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,322 @@
+body {
+  font-size: 0.12rem;
+}
+
+#nav {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0.09rem 0.14rem;
+  margin-right: 0.14rem;
+  font-size: 0.14rem;
+}
+#nav::-webkit-scrollbar {
+  display: none;
+}
+#nav li {
+  width: 0.3rem;
+  height: 0.18rem;
+  line-height: 0.18rem;
+  margin-right: 0.4rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0 0.14rem;
+  box-sizing: border-box;
+  overflow: auto;
+}
+section #jingxuan #top-img {
+  width: 100%;
+}
+section #jingxuan #top-img img {
+  width: 100%;
+  border-radius: 0.05rem;
+}
+section #jingxuan #icon-list {
+  height: 0.5rem;
+  line-height: 0.5rem;
+  font-size: 0.11rem;
+  display: flex;
+  justify-content: space-between;
+}
+section #jingxuan #icon-list li:nth-of-type(2) {
+  width: 0.82rem;
+}
+section #jingxuan #icon-list li span {
+  color: #ef972a;
+}
+section #jingxuan .center-goods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 1.48rem;
+  align-content: space-between;
+  margin-bottom: 0.12rem;
+}
+section #jingxuan .center-goods figure {
+  width: 0.61rem;
+  height: 0.77rem;
+  border-radius: 0.02rem;
+  /* background-color: #e3e2e2; */
+  margin-right: 0.32rem;
+  position: relative;
+}
+section #jingxuan .center-goods figure:nth-of-type(4n) {
+  margin-right: 0;
+}
+section #jingxuan .center-goods figure span {
+  width: 100%;
+  display: block;
+}
+section #jingxuan .center-goods figure span img {
+  width: 100%;
+  height: 100%;
+}
+section #jingxuan .center-goods figure figcaption {
+  /* position: absolute; */
+  bottom: -0.12rem;
+  left: 0;
+  width: 0.61rem;
+  height: 0.12rem;
+  text-align: center;
+  line-height: 0.12rem;
+}
+section #jingxuan .title-24h {
+  height: 0.53rem;
+  font-size: 0.16rem;
+  line-height: 0.53rem;
+  color: #333333;
+  font-weight: normal;
+  display: flex;
+  justify-content: space-between;
+}
+section #jingxuan .title-24h span {
+  color: #e3e2e2;
+  font-size: 0.11rem;
+}
+section #dapei #top-img {
+  width: 100%;
+}
+section #dapei #top-img img {
+  width: 100%;
+  height: 1.5rem;
+  border-radius: 0.05rem;
+}
+section #dapei .main-goods {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.1rem 0 0.25rem 0;
+}
+section #dapei .main-goods div {
+  width: 0.74rem;
+  height: 1.03rem;
+  background-color: #f2f0f0;
+  box-sizing: border-box;
+  padding: 0 0.1rem 0.1rem 0.1rem;
+  text-align: center;
+}
+section #dapei .main-goods div img {
+  width: 100%;
+  height: 100%;
+}
+section #dapei .main-goods div span {
+  display: block;
+  height: 0.25rem;
+  line-height: 0.25rem;
+  margin-top: 0.1rem;
+}
+section #dapei .main-MAN {
+  padding: 0.1rem 0.45rem 0.08rem 0.58rem;
+  box-sizing: border-box;
+  height: 0.83rem;
+  display: flex;
+  justify-content: center;
+}
+section #dapei .main-MAN div {
+  width: 2.4rem;
+  height: 0.58rem;
+  position: relative;
+}
+section #dapei .main-MAN div #main-MAN1 {
+  width: 0.55rem;
+  height: 0.25rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+section #dapei .main-MAN div #main-MAN2 {
+  width: 0.55rem;
+  height: 0.25rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+section #dapei .main-MAN div span {
+  font-size: 0.2rem;
+  color: #f38c00;
+  position: absolute;
+  top: 0.08rem;
+  left: 1rem;
+}
+section #dapei .main-MAN div p {
+  font-size: 0.16rem;
+  color: #333333;
+  position: absolute;
+  bottom: 0.07rem;
+  right: 0.72rem;
+  font-weight: 500;
+}
+section #dapei #main-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+section #dapei #main-bottom .bottom-imgs {
+  width: 1.66rem;
+  height: 1.93rem;
+  text-align: center;
+}
+section #dapei #main-bottom .bottom-imgs div {
+  background: url("../img/dapei-4-1.png") no-repeat center/cover;
+  border-radius: 5px;
+  width: 1.66rem;
+  height: 1.15rem;
+}
+section #dapei #main-bottom .bottom-imgs span {
+  display: block;
+  width: 1.66rem;
+  font-size: 0.14rem;
+  color: #333333;
+  height: 0.31rem;
+  line-height: 0.31rem;
+}
+section #dapei #main-bottom .bottom-imgs b {
+  font-weight: normal;
+  display: block;
+  width: 0.66rem;
+  height: 0.18rem;
+  border-radius: 0.04rem;
+  background-color: rgba(51, 51, 51, 0.1);
+  margin-left: 0.15rem;
+}
+section #shangxin .title-box {
+  display: flex;
+  position: relative;
+}
+section #shangxin .title-box .img-box {
+  width: 0.32rem;
+  height: 0.33rem;
+  border-radius: 0.17rem;
+  border: 0.01rem solid #979797;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-right: 0.13rem;
+}
+section #shangxin .title-box .img-box img {
+  margin-top: 0.08rem;
+  width: 80%;
+  height: 80%;
+}
+section #shangxin .title-box .title-pinpai {
+  font-size: 0.14rem;
+  color: #333333;
+}
+section #shangxin .title-box .timer {
+  position: absolute;
+  bottom: 0;
+  left: 0.48rem;
+}
+section #shangxin .title-box .gengduo {
+  text-align: center;
+  display: block;
+  width: 0.78rem;
+  height: 0.2rem;
+  border-radius: 0.03rem;
+  border: 1px solid #333333;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #979797;
+}
+section #shangxin .shangxin-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+section #shangxin .shangxin-main figure {
+  width: 1.15rem;
+  heigt: 1.39rem;
+  margin-bottom: 0.2rem;
+}
+section #shangxin .shangxin-main figure span {
+  width: 100%;
+  height: 1.23rem;
+}
+section #shangxin .shangxin-main figure span img {
+  width: 100%;
+}
+section #shangxin .shangxin-main figure figcaption {
+  text-align: center;
+  font-size: 0.14rem;
+  line-height: 0.14rem;
+}
+section #rexiao > div {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+section #rexiao > div figure {
+  width: 49%;
+  height: 2.02rem;
+  border-top: 0.02rem solid #d8d8d8;
+  background: #fff;
+}
+section #rexiao > div figure:nth-of-type(2n) {
+  border-left: 0.02rem solid #d8d8d8;
+}
+section #rexiao > div figure p {
+  width: 1.85rem;
+  height: 1.38rem;
+  display: flex;
+  justify-content: center;
+}
+section #rexiao > div figure p img {
+  width: 1.38rem;
+  height: 100%;
+}
+section #rexiao > div figure figcaption {
+  padding: 0 0.15rem 0.12rem 0.15rem;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 0.14rem;
+}
+section #rexiao > div figure figcaption div {
+  display: inline-block;
+  width: 1.42rem;
+  text-align: right;
+  position: relative;
+}
+section #rexiao > div figure figcaption div .desc {
+  line-height: 0.25rem;
+  display: block;
+  text-align: center;
+}
+section #rexiao > div figure figcaption div .price {
+  line-height: 0.27rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+section #rexiao > div figure figcaption div .fw-num {
+  line-height: 0.27rem;
+  font-size: 0.12rem;
+}
+section #rexiao > div figure figcaption div:nth-of-type(2n) {
+  text-align: left;
+}

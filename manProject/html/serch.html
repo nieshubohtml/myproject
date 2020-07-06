@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/set.css">
+    <link rel="stylesheet" href="../fonts/iconfont.css">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <header style="width: 100%;
+    height: 0.64rem;
+    padding: 0;
+    background-color: #303030;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;">
+        <span class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu- back"
+            style="color:aliceblue;font-size: 0.2rem;"></span>
+        <input type="text" placeholder="搜索商品" oninput="onInput(event)" style="width: 88%;
+        height: 0.28rem;
+        line-height: 0.28rem;
+        border-radius: 0.14rem;
+        background-color: #ffffff;
+        border: 0;outline:none;cursor: pointer;
+        text-align: center;">
+    </header>
+
+    <section class='shangpin'>
+        <li style='height:0.3rem;
+        width: 100%;background: #fff;
+        border-bottom: 1px solid #ccc;
+        color: #000;font-size:0.15rem;text-align: center;line-height: 0.3rem;'>亲，您来了...</li>
+    </section>
+    <script>
+        var span = document.querySelector('.back')
+        span.onclick = function () {
+            location.href = 'jingxuan.html'
+        }
+        function onInput(event) {
+            console.log(event.target.value)
+            if (event.target.value != '') {
+                $('.shangpin').show();
+                $.get("http://localhost:3000/api/v1/products?name=" + event.target.value, function (data) {
+                    console.log(data)
+                    if (data.products == '') {
+                        $('.shangpin').html(`
+                <li style='height:0.3rem;
+        width: 100%;background: #fff;
+        border-bottom: 1px solid #ccc;
+        color: #000;font-size:0.15rem;text-align: center;line-height: 0.3rem;'>没有搜索到</li>
+                `);
+                    } else {
+                        var html = ''
+                        for (var i = 0; i < data.products.length; i++) {
+                            html += `
+                            <a href='pdtdetail.html?id=${data.products[i]._id}' style='height:0.3rem;
+        width: 100%;background: #fff;
+        border-bottom: 1px solid #ccc;
+        color: #000;font-size:0.15rem;text-align: center;line-height: 0.3rem;display:block'>${data.products[i].name}</a>
+                            `
+                        }
+                        $('.shangpin').html(html)
+                    }
+                });
+            } else {
+                $('.shangpin').hide();
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>客服</title>
+
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/kefu.css" />
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../fonts/iconfont.css">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script>
+        window.onload = function () {
+            /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+                              为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+            getRem(375, 100)
+        };
+        window.onresize = function () {
+            getRem(375, 100)
+        };
+
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <article class="head">
+            <span class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu- fh"></span>
+            <p>客服</p>
+        </article>
+    </header>
+    <section class='centers'>
+        <time>
+            4月4日13:41
+        </time>
+        <figure class="le" style='display: flex'>
+            <div class="pic pl"></div>
+            <figure class="left liao">
+                <article class="sq lsq"></article>
+                您好！客服小衣为您服务，有什么可以帮你?
+            </figure>
+        </figure>
+        <figure class="le ri" style="display: flex;">
+            <figure class="right liao">
+                我想了解下最近的活动有什么限制?
+                <article class="sq rsq"></article>
+            </figure>
+            <div class="pic pr"></div>
+        </figure>
+
+    </section>
+
+    <footer>
+        <span class="iconfont icon-yuyin"></span>
+        <input type="text" id='sad' class='center'>
+        <span class="iconfont icon-biaoqing"></span>
+        <span class='btn' style="display: block;width: 0.3rem;height:0.2rem;font-size: 0.15rem;">发送</span>
+    </footer>
+
+
+    <script>
+        // js 版本
+        $('.btn').click(function () {
+            // 跨越，nodejs代理服务器
+            var shuju = {
+                reqType: 0,
+                perception: {
+                    inputText: {
+                        text: $('.center').val()
+                    }
+                },
+                userInfo: {
+                    apiKey: '19249909816b432caff73e58c71315f9',
+                    userId: '684212c58a9057c8'
+                }
+            }
+            // console.log($('.center').val())
+            // console.log($('.centers').html())
+            var html = $('.centers').html() +
+                `
+                <figure class="le ri" style='display: flex'>
+            <figure class="right liao">
+                ${$('.center').val()}
+                <article class="sq rsq"></article>
+            </figure>
+            <div class="pic pr"></div>
+        </figure>
+            `
+            $('.centers').html(html)
+            document.getElementById('sad').value = ""
+            $.ajax({
+                url: "http://localhost:3000/api/v2/proxy ",
+                type: "post",
+                traditional: true,
+                // contentType: 'application/json',
+                data: {
+                    url: 'http://openapi.tuling123.com/openapi/api/v2',
+                    shuju: JSON.stringify(shuju)
+                },
+                success: function (res) {
+                    console.log(res);
+                    console.log(res.results[0].values.text)
+                    // location.href = 'end.html?price=' + $('.end').html()
+                    var html = $('.centers').html() +
+                        `
+                    <figure class="le" style='display: flex'>
+            <div class="pic pl"></div>
+            <figure class="left liao">
+                <article class="sq lsq"></article>
+               ${res.results[0].values.text}
+            </figure>
+        </figure>
+            
+            `
+                    $('.centers').html(html)
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            })
+        })
+        var span = document.querySelector('.fh')
+        span.onclick = function () {
+            location.href = 'myset.html'
+        }
+    </script>
+
+
+</body>
+
+</html>

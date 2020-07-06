@@ -1,0 +1,74 @@
+section {
+  padding: 0 0.15rem;
+}
+
+section .tbox {
+  width: 100%;
+  height: 2rem;
+}
+
+section .tbox .tb {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+section .tbox .tlb {
+  overflow: hidden;
+}
+
+section .tbox .tlb img {
+  width: 100%;
+}
+
+section .tbox .trb {
+  background-color: #f2f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+section .tbox .trb .word {
+  width: 1.55rem;
+  height: 0.45rem;
+  border: 0.01rem solid #000;
+}
+
+section .tbox .trb .word p {
+  text-align: center;
+  line-height: 0.2rem;
+  font-size: 0.12rem;
+  color: #333333;
+}
+
+section .tbox .trb .bpic {
+  height: 1.25rem;
+  width: 1.55rem;
+}
+
+section .tbox .trb .bpic img {
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+section .bbox {
+  height: 0.44rem;
+  padding: 0.12rem 0 0.22rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section .bbox p {
+  font-size: 0.14rem;
+  color: #333;
+}
+
+section .bbox .yd {
+  font-size: 0.12rem;
+  color: #888;
+  display: flex;
+  justify-content: space-between;
+}

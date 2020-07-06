@@ -1,0 +1,379 @@
+html,
+body,
+ul,
+li,
+dl,
+dt,
+dd,
+p,
+figure,
+figcaption,
+h1,
+h2,
+h3,
+h4,
+form {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    border: 0;
+}
+
+h2,
+h3,
+h1,
+h4 {
+    font-weight: normal;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+}
+
+header {
+    height: 0.64rem;
+    width: 3.75rem;
+    background-color: #28292e;
+}
+
+header div {
+    height: 0.64rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+header div a {
+    width: 0.09rem;
+    height: 0.16rem;
+    position: absolute;
+    bottom: 0.22rem;
+    left: 0.13rem;
+    background: url(../img/lujing.png) no-repeat;
+
+}
+
+header div p {
+    font-size: 0.18rem;
+    color: #f4f0f0;
+
+}
+
+/* section .banner img {
+    height: 2.09rem;
+
+} */
+section {
+    /* display:flex; */
+    flex: 1;
+    overflow: auto;
+}
+
+section .banner {
+    height: 4.41rem;
+    display: block;
+    background: url('../img/vip.png') no-repeat center/cover;
+}
+
+article .content {
+    /* height: 1.26rem; */
+    margin: 0.2rem 0.15rem 0.18rem;
+
+
+}
+
+article .content .title {
+    height: 0.25rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.title .left {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 0.14rem;
+    color: #333;
+}
+
+.title .left b {
+    margin-top: 0.02rem;
+    display: block;
+    height: 0.15rem;
+    width: 0.04rem;
+    background: #dfc495;
+    margin-right: 0.04rem;
+}
+
+.title .right b {
+    display: block;
+    width: 0.05rem;
+    height: 0.1rem;
+    background: url(../img/lujingyou.png) no-repeat center;
+    margin-left: 0.05rem;
+    margin-top: 0.04rem;
+}
+
+.title .right {
+    font-size: 0.12rem;
+    color: #999;
+    display: flex;
+    justify-content: flex-start;
+}
+.title .right a{
+    font-size: 0.12rem;
+    color: #999;
+}
+
+article .list {
+    height: 1.01rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+article .list li {
+    width: 0.77rem;
+    height: 1.01rem;
+    border-radius: 0.08rem;
+    background-color: rgba(251, 232, 191, 0.30196078431372547);
+    border: 1px solid #d8ba8b;
+    position: relative;
+}
+
+.list li h3 {
+    position: absolute;
+    width: 0.34rem;
+    height: 0.25rem;
+    background: url(../img/2s.png) no-repeat;
+
+}
+
+.item {
+    width: 0.62rem;
+    height: 0.6rem;
+    margin: 0.15rem 0.06rem 0.22rem 0.07rem;
+    font-size: 0.12rem;
+
+}
+
+.item h2 {
+    font-size: 0.12rem;
+    display: flex;
+    justify-content: center;
+    color: #d8ba8b;
+    height: 0.18rem;
+    width: 0.62rem;
+    border-bottom: 0.01rem dashed #d8ba8b;
+}
+
+.item p {
+    text-align: center;
+    color: #d8ba8b;
+    margin: 0.08rem 0 0.1rem 0;
+}
+
+.item em {
+    font-style: normal;
+    text-align: center;
+    color: #999;
+}
+
+.content .banner2 {
+    height: 2.04rem;
+    background: url(../img/hy1.png) no-repeat center/cover;
+    margin-bottom: 0.1rem;
+}
+
+section .kongbai {
+    height: 0.1rem;
+    background-color: #f7f7f7;
+}
+
+article .content .goods {
+    margin: 0.08rem 0rem 0 0rem;
+    /* background: #0f0; */
+
+
+}
+
+.goods .lists {
+    display: flex;
+    font-size: 0.12rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.goods .lists li {
+    width: 1.1rem;
+    height: 1.38rem;
+    background: #f7f7f7;
+    margin-bottom: 0.05rem;
+    border-radius: 0.08rem;
+    text-align: center;
+}
+
+.goods .lists li a h2 {
+    margin: 0.15rem 0 0.11rem 0;
+    width: 1.1rem;
+    height: 0.71rem;
+    display: flex;
+    justify-content: center;
+
+    /* background: url(../img/yangpin.png) no-repeat center/cover; */
+}
+.goods .lists li a h2 img{
+    height:100%;
+    /* width:100%; */
+    
+}
+
+.goods .lists li a p {
+    font-size: 0.12rem;
+    color: #777;
+}
+
+.goods .lists li a i {
+    font-size: 0.12rem;
+    color: #d8ba8b;
+    margin-top: 0.09rem;
+    font-style: normal;
+}
+
+/*  其他权益 */
+
+article .content .top div img{
+    width:0.5rem;
+    height:0.5rem;
+}
+article .content .top .top-t {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.1rem;
+}
+
+article .content .top .top-t div {
+    width: 1.64rem;
+    height: 1.35rem;
+    background-color: #d8d8d8;
+    font-size: 0.14rem;
+    color: #333333;
+    font-family: "Ping Fang SC";
+    text-align: center;
+}
+
+article .content .top .top-t div span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin: 0.18rem 0 0.14rem 0;
+
+}
+
+article .content .top .top-t div p {
+    font-size: 0.14rem;
+    color: #333333;
+}
+
+article .content .top .top-b {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.1rem;
+}
+
+article .content .top .top-b div {
+    width: 1.1rem;
+    height: 0.94rem;
+    background-color: #d8d8d8;
+    font-size: 0.14rem;
+    color: #333333;
+    font-family: "Ping Fang SC";
+    text-align: center;
+}
+
+article .content .top .top-b div span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin: 0.1rem 0;
+}
+
+/* 会员最爱 */
+
+aside h2 {
+    height: 0.14rem;
+    margin: 0.14rem 0.15rem 0.12rem;
+    font-size: 0.13rem;
+}
+
+aside .content {
+    display: flex;
+    justify-content: space-between;
+    height: 2.55rem;
+    background: #f7f7f7;
+    font-size: 0.12rem;
+}
+
+aside .content .left,
+aside .content .right {
+    width: 1.82rem;
+    background: #fff;
+    color: #333;
+
+}
+
+aside .content span {
+    display: inline-block;
+    vertical-align: middle;
+    height: 1.5rem;
+    width:100%;
+    text-align: center;
+    /* margin: 0.16rem 0 0.19rem 0; */
+}
+aside .content span img{
+    width:100%;
+    height:100%;
+
+}
+aside .content h3 {
+    text-align: center;
+    margin-bottom: 0.17rem;
+    margin-top:0.2rem;
+    font-size: 0.14rem;
+}
+
+aside .content b {
+    margin-left: 0.36rem;
+    font-weight: normal;
+    font-size: 0.14rem;
+
+}
+
+aside .content b i {
+    font-style: normal;
+    color: #999;
+    margin-left: 0.58rem;
+    font-size: 0.12rem;
+}

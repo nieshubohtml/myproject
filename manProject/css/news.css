@@ -1,0 +1,128 @@
+body,
+form,
+img,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+dl,
+dt,
+dd,
+a,
+figure,
+figcaption,
+form,
+input {
+    margin: 0;
+    padding:0;
+}
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    font-size: 26.667vw
+}
+body,
+html {
+    height: 100%
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+h1,h2,h3,h4{
+    font-weight: normal;
+}
+
+/* 头部 */
+header{
+    display: flex;
+    height:0.64rem;
+    background-color: #303030;
+    font-size: 0.18rem;
+    color: #f4f0f0;
+    align-items: center;
+    padding: 0 0.14rem;
+    justify-content: space-between;
+}
+header h2{
+    font-weight: normal;
+    font-size: 0.18rem;
+}
+header .iconfont{
+    font-size:0.16rem;
+}
+
+
+section{
+    flex: 1;
+    overflow: auto;
+}
+section article{
+    height: 0.22rem;
+    font-size:0.12rem;
+    line-height: 0.22rem;
+    color: #ee8300;
+    padding:0 0.14rem;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+section figure{
+    height:0.77rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:0.14rem;
+    padding: 0 0.14rem;
+}
+
+section .center{
+    display: flex;
+    align-items:center;
+    position: relative;
+}
+section .center .bg{
+    text-align: center;
+    width: 0.34rem;
+    height: 0.3rem;
+    border-radius: 4px;
+    background-color: #ee8300;
+}
+.center .bg .iconfont{
+    color:#fff;
+    line-height: 0.3rem;
+}
+
+.center .bc{
+    margin-left:0.08rem;
+}
+.center .bc p{
+    font-size: 0.12rem;
+    margin-top:0.06rem;
+}
+
+.center .demo{
+    width: 0.13rem;
+    height:0.13rem;
+    font-size:0.11rem;
+    border-radius: 50%;
+    background-color: #f04444;
+    text-align: center;
+    color:#fff;
+    position: absolute;
+    top:0;
+    left:0.26rem;
+    line-height: 0.13rem;
+}
+
+section .line{
+    height: 0.1rem;
+    background-color: #d8d8d8;
+}

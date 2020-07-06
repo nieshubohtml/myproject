@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/myset.css">
+    <link rel="stylesheet" href="../fonts/iconfont.css">
+
+    <script src="../fonts/iconfont.js"></script>
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-cookie/1.4.0/jquery.cookie.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class='set'>
+            <span class='iconfont icon-shezhi'></span>
+            <span class='iconfont icon-lingdang'></span>
+        </div>
+
+        <div class='myImage'>
+            <img src="../img/头像.png" alt="">
+            <div class='Image'>
+                <h3>小包子<span>普通用户</span></h3>
+                <span>183******325</span>
+            </div>
+        </div>
+        <div class='boxs'>
+            <!-- 浮动订单 -->
+            <div class='order'>
+                <div class='title'>
+                    <h3>我的订单</h3>
+                    <span>
+                        全部订单<i class='iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-1'></i>
+                    </span>
+                </div>
+                <nav>
+                    <figure>
+                        <span class="iconfont icon-tubiaolunkuo-"></span>
+                        <figcaption>待付款</figcaption>
+                    </figure>
+                    <figure>
+                        <span class="iconfont icon-daifahuo"></span>
+                        <figcaption>待发货</figcaption>
+                    </figure>
+                    <figure>
+                        <span class="iconfont icon-weibiaoti2fuzhi04"></span>
+                        <figcaption>待收货</figcaption>
+                    </figure>
+                    <figure>
+                        <span class="iconfont icon-fahuo"></span>
+                        <figcaption>待评价</figcaption>
+                    </figure>
+                    <figure>
+                        <span class="iconfont icon-shouhou"></span>
+                        <figcaption>售后</figcaption>
+                    </figure>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- 内容 -->
+    <section>
+        <div class='box01'>
+            <p class='vip'><span class='iconfont icon-VIP'></span>开通会员，每年可节省￥1840</p>
+        </div>
+        <article>
+            <p>
+                <svg class="icon" aria-hidden="true" style='font-size:0.2rem;padding-right:0.1rem'>
+                    <use xlink:href="#icon-shoucang"></use>
+                </svg>
+                我的收藏
+            </p>
+            <span class='iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-1'></span>
+        </article>
+        <article>
+            <p>
+                <svg class="icon" aria-hidden="true" style='font-size:0.2rem;padding-right:0.1rem'>
+                    <use xlink:href="#icon-youhuiquan"></use>
+                </svg>
+                我的优惠券
+            </p>
+            <span class='iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-1'></span>
+        </article>
+        <article>
+            <p>
+                <svg class="icon" aria-hidden="true" style='font-size:0.2rem;padding-right:0.1rem'>
+                    <use xlink:href="#icon-dizhi"></use>
+                </svg>
+                地址管理
+            </p>
+            <span class='iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-1'></span>
+        </article>
+        <article>
+            <p>
+                <svg class="icon" aria-hidden="true" style='font-size:0.2rem;padding-right:0.1rem'>
+                    <use xlink:href="#icon-kefu"></use>
+                </svg>
+                在线客服
+            </p>
+            <span class='iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-1'></span>
+        </article>
+        <article>
+            <p>
+                <svg class="icon" aria-hidden="true" style='font-size:0.2rem;padding-right:0.1rem'>
+                    <use xlink:href="#icon-xinfeng"></use>
+                </svg>
+                帮助与反馈
+            </p>
+            <span class='iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-1'></span>
+        </article>
+        <article>
+            <p>
+                <svg class="icon" aria-hidden="true" style='font-size:0.2rem;padding-right:0.1rem'>
+                    <use xlink:href="#icon-yaoqinghaoyou"></use>
+                </svg>
+                邀请好友
+            </p>
+            <span class='iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-1'></span>
+        </article>
+
+
+    </section>
+
+
+
+    <!-- 底部 -->
+    <footer>
+        <figure>
+            <a href="inde.html">
+                <span class="iconfont icon-shouye"></span>
+                <figcaption>首页</figcaption>
+            </a>
+        </figure>
+        <figure>
+            <a href="jingxuan.html">
+                <span class="iconfont icon-iconset0219"></span>
+                <figcaption>精选</figcaption>
+            </a>
+        </figure>
+        <figure>
+            <a href="classify.html">
+                <span class="iconfont icon-fenlei"></span>
+                <figcaption>分类</figcaption>
+            </a>
+        </figure>
+        <figure>
+            <a href="cart.html">
+                <span class="iconfont icon-buoumaotubiao01"></span>
+                <figcaption>购物车</figcaption>
+            </a>
+        </figure>
+        <figure>
+            <a href="myset.html">
+                <span class="iconfont icon-wode"></span>
+                <figcaption>我的</figcaption>
+            </a>
+        </figure>
+    </footer>
+    <script>
+        $.ajax({
+            url: "http://localhost:3000/api/v1/users/info",
+            type: "GET",
+            dataType: "json",
+            headers: {
+                authorization: 'Bearer ' + $.cookie("token"),
+            },
+            success: function (res) {
+                console.log(res);
+                if (res.avatar) {
+                    var html = ''
+                    html += `
+                <img src=${res.avatar} alt="">
+            <div class='Image'>
+                <h3>${res.nickName}<span>普通用户</span></h3>
+                <span>183******325</span>
+            </div>
+                `
+                    $('.myImage').html(html)
+                } else {
+                    var htmls = `
+                    <img src="../img/txmr.jpg" alt="">
+            <div class='Image'>
+                <h3>${res.userName}<span>普通用户</span></h3>
+                <span>183******325</span>
+            </div>
+                    `
+                    $('.myImage').html(htmls)
+                }
+            },
+            error: function (error) {
+                // alert('网络错误')
+                location.href = 'login.html'
+            }
+        });
+        $('figure a').eq(4).css({ color: '#eda852' })
+        $('figure a').eq(0).click(function () {
+            location.href = 'inde.html'
+        })
+        $('.title span').click(function () {
+            location.href = 'orders.html'
+        })
+        // 跳转帮助页面
+        $('article').eq(4).click(function () {
+            location.href = 'help.html'
+        })
+
+        //跳转优惠券页面
+        $('article').eq(1).click(function () {
+            location.href = 'youhui.html'
+        })
+
+        //跳转到地址信息管理页面
+        $('article').eq(2).click(function () {
+            location.href = 'shouhuoDZ.html'
+        })
+
+
+
+        //跳转到设置页面
+        $('.set span').eq(0).click(function () {
+            location.href = 'set.html'
+        })
+
+        //跳转到消息页面
+        $('.set span').eq(1).click(function () {
+            location.href = 'news.html'
+        })
+
+        //跳转到订单页面
+        console.log($('nav figure'))
+
+
+        $('nav figure').click(function () {
+            var id = $(this).index()
+            location.href = `orders.html?${id + 1}`
+            if (id == 4) {
+                location.href = 'after-sever.html'
+            }
+        })
+
+
+        //跳转到客服
+
+        $('article').eq(3).click(function () {
+            location.href = 'kefu.html'
+        })
+
+        //跳转到收藏
+        $('article').eq(0).click(function () {
+            location.href = 'shoucang.html'
+        })
+
+        //跳转到邀请
+        $('article').eq(5).click(function () {
+            location.href = 'yaoqing.html'
+        })
+
+        //跳转到vip页面
+        $('.vip').click(function () {
+            location.href = 'vip.html'
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>

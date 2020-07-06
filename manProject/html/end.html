@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link id="cdlink" rel="stylesheet" type="text/css" href="../css/indexOne.css" />
+    <link rel="stylesheet" type="text/css" href="../css/ccommon.css" />
+
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../fonts/iconfont.css">
+    <link rel="stylesheet" href="../css/cart.css" />
+    <script src="https://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+
+    <style>
+        /* 页脚 */
+        footer {
+            height: 0.5rem;
+            border-top: 1px solid #eeeeee;
+            display: flex;
+            justify-content: space-around;
+            font-size: 0.12rem;
+            text-align: center;
+            align-items: center;
+        }
+
+        footer figure .iconfont {
+            font-size: 0.2rem;
+        }
+
+        footer figure a {
+            color: #333333;
+        }
+
+        a:hover {
+            color: #ecb067
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+                              为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+            getRem(375, 100)
+        };
+        window.onresize = function () {
+            getRem(375, 100)
+        };
+
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <span class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu- back"
+            style="color:aliceblue;font-size: 0.2rem;"></span>
+        <h2>确认订单</h2>
+        <p class='del'></p>
+    </header>
+    <section>
+        <div class='banner' style="font-size: 0.2rem;">
+            购买成功
+        </div>
+    </section>
+    <article>
+        <div class="left-end">
+            <div class="nsb">
+                <i>合计：￥<i class='demo'>0</i></i>
+                <span>不含运费</span>
+            </div>
+        </div>
+        <div class="right-end" style='width: 50%;'>
+            继续购买
+        </div>
+    </article>
+</body>
+<script>
+    $('.back').click(function () {
+        window.history.go(-1);
+    })
+    var url = location.search; //获取url中"?"符后的字串 ('?modFlag=business&role=1')  
+    var theRequest = new Object();
+    if (url.indexOf("?") != -1) {
+        var str = url.substr(1); //substr()方法返回从参数值开始到结束的字符串；  
+        var strs = str.split("&");
+        for (var i = 0; i < strs.length; i++) {
+            theRequest[strs[i].split("=")[0]] = (strs[i].split("=")[1]);
+        }
+        console.log(theRequest.price); //此时的theRequest就是我们需要的参数；  
+    }
+    var a = theRequest.price
+    $('.demo').html(a)
+    $('.right-end').click(function () {
+        location.href = 'jingxuan.html'
+    })
+</script>
+
+</html>

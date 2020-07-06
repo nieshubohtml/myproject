@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <script>
+    window.onload = function () {
+      getRem(375, 100);
+    };
+    window.onresize = function () {
+      getRem(375, 100);
+    };
+
+    function getRem(pwidth, prem) {
+      var html = document.getElementsByTagName("html")[0];
+      var oWidth =
+        document.body.clientWidth || document.documentElement.clientWidth;
+      html.style.fontSize = (oWidth / pwidth) * prem + "px";
+    }
+  </script>
+  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery-cookie/1.4.0/jquery.cookie.js"></script>
+  <link rel="stylesheet" href="../css/swiper1.min.css" />
+  <link rel="stylesheet" href="../fonts/iconfont.css" />
+  <link rel="stylesheet" href="../css/pdtdetail.css" />
+  <style>
+    body {
+      position: relative;
+    }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target="#navbar-example">
+  <header>
+    <p class="tan"
+      style="z-index:999;width: 1.5rem;height:0.3rem;background: #000;position: absolute;top:40%;left:30%;color: white;text-align: center;line-height: 0.3rem;font-size: 0.12rem;display: none;">
+    </p>
+    <span class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-" id="return"></span>
+    <ul class="nav nav-tabs" role="tablist" id="menu">
+      <li class="active"><a href="#shanpin">商品</a></li>
+      <li><a href="#pingjia">评价</a></li>
+      <li><a href="#xiangqing">详情</a></li>
+      <li><a href="#tuijian">推荐</a></li>
+    </ul>
+    <span class="iconfont icon-13"></span>
+  </header>
+  <section>
+    <div class="banner" id="shanpin">
+      <!-- Swiper -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img class='img' style='width: 100%;height: 100%;' src='../img/duanxiu.png' alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img class='img' style='width: 100%;height: 100%;' src='../img/duanxiu.png' alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img class='img' style='width: 100%;height: 100%;' src='../img/duanxiu.png' alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img class='img' style='width: 100%;height: 100%;' src='../img/duanxiu.png' alt="" />
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <article>
+      <div class="txt">
+        <h2>男短袖/T恤/纯色白色纯白纯棉大码半袖丝光棉全棉宽松体恤修身上衣</h2>
+        <div class="price">
+          <p>￥59</p>
+          <b>￥99</b>
+          <span>6.0折</span>
+        </div>
+        <div class="express">
+          <p>快递: ￥8</p>
+          <p>42人付款</p>
+          <p>121人想买</p>
+        </div>
+      </div>
+      <div class="vip">
+        <div class="vip-l">
+          <span>VIP</span>
+          <p>加入会员下单立减￥5.9</p>
+        </div>
+        <div class="vip-r open">
+          <p>开通</p>
+          <span class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-1"></span>
+        </div>
+      </div>
+      <div class="baoyou">
+        <div>正品保障</div>
+        <div>满99包邮</div>
+        <div>7天无理由退换</div>
+        <div>快速</div>
+      </div>
+    </article>
+    <article>
+      <div class="parameter">
+        <div>
+          <p>规格</p>
+          <h2>已选:“XL”</h2>
+          <span class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-1"></span>
+        </div>
+        <div>
+          <p>参数</p>
+          <h2>品牌/参数/..</h2>
+          <span class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-1"></span>
+        </div>
+        <aside>
+          <p>购买须知</p>
+          <h2></h2>
+          <span class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-1"></span>
+        </aside>
+      </div>
+    </article>
+    <article>
+      <div class="evaluate" id="pingjia">
+        <h2>
+          <p>商品评价（1086）</p>
+          <b>查看全部<span class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-1"></span></b>
+        </h2>
+        <div class="boxs">
+          <div>质量好（126）</div>
+          <div>衣服很舒适（322）</div>
+          <div>最新（136）</div>
+        </div>
+        <div class="photo">
+          <div class="photo_box">
+            <span><img src="../img/xvip.png" alt="" /></span><b>星**y</b>
+          </div>
+          <p>
+            穿上好舒服，价格便宜，以前我总是喜欢大品牌，收到这个之后，感觉很上档次，不次于大品牌
+          </p>
+        </div>
+      </div>
+    </article>
+    <article>
+      <div class="youyi">
+        <div class="y_top">
+          <p>有时又一</p>
+          <span>品牌主页</span>
+        </div>
+        <div class="y_bottom">
+          <img src="../img/youshi.png" alt="" />
+          <p>
+            有时又一成立于2012年的夏天，那年的夏天特别的热，持续的高温从...
+          </p>
+        </div>
+      </div>
+      <div class="pictrue" id="xiangqing">
+        <img src="../img/shiyang.png" alt="" />
+        <figure></figure>
+      </div>
+    </article>
+  </section>
+  <footer>
+    <div class="left">
+      <h2>
+        <span class="iconfont icon-icon_kefu
+            "></span>
+        <p>客服</p>
+      </h2>
+      <h2>
+        <span class="iconfont icon-buoumaotubiao01
+            "></span>
+        <p>购物车</p>
+        <span class="yuan" style="display: none">1</span>
+      </h2>
+      <h2>
+        <span class="iconfont icon-shoucang1"></span>
+        <p>收藏</p>
+      </h2>
+    </div>
+    <div class="right">
+      <div class="carts">加入购物车</div>
+      <div class="buy">立即购买</div>
+    </div>
+  </footer>
+  <!-- js代码 -->
+
+  <script src="../js/swiper1.min.js"></script>
+  <script src="../js/querystring.js"></script>
+  <script>
+    // 返回上一页
+    $("#return").click(function () {
+      console.log(1);
+      window.history.go(-1);
+    });
+    // 跳转到品牌页面
+    let brandHref = document.querySelector(".y_top span");
+    console.log(brandHref);
+    brandHref.onclick = function () {
+      location.href = "prodetail.html";
+    };
+    // 商品滑动
+    var swiper = new Swiper(".swiper-container", {
+      pagination: {
+        el: ".swiper-pagination",
+        // autoplay: true,
+      }
+    });
+    init()
+    // 开通会员
+    // $(".open").click(function () {
+    //   var url = "vip.html";
+    //   location.href = url;
+    // });
+
+    $(function () {
+      $("#menu li").click(function () {
+        //this  原生的dom对象
+        console.log(this);
+        console.log($(this).index());
+        $(this)
+          .addClass("active")
+          .siblings()
+          .removeClass("active");
+        // $('.panel').removeClass('active').eq($(this).index()).addClass('active')
+      });
+    });
+
+    function init() {
+      var url = location.search; //获取url中"?"符后的字串 ('?modFlag=business&role=1')  
+      var theRequest = new Object();
+      if (url.indexOf("?") != -1) {
+        var str = url.substr(1); //substr()方法返回从参数值开始到结束的字符串；  
+        var strs = str.split("&");
+        for (var i = 0; i < strs.length; i++) {
+          theRequest[strs[i].split("=")[0]] = (strs[i].split("=")[1]);
+        }
+        console.log(theRequest.id); //此时的theRequest就是我们需要的参数；  
+      }
+      var a = theRequest.id
+      var url =
+        "http://localhost:3000/api/v1/products?per=20&id=" + a;
+      $.ajax({
+        url: url,
+        type: "get",
+        // data: data,
+        success: function (res) {
+          console.log(res);
+          var arrs = res.products
+          arrs.forEach((e, index) => {
+            // console.log(e._id)
+            if (e._id == theRequest.id) {
+              var str = ''
+              str += `
+        <h2>${e.descriptions}</h2>
+        <div class="price">
+          <p>￥${e.price}</p>
+          <b>￥${e.price + 30}</b>
+          <span>6.0折</span>
+        </div>
+        <div class="express">
+          <p>快递: ￥8</p>
+          <p>42人付款</p>
+          <p>121人想买</p>
+        </div>
+            `
+              $(".txt").html(str);
+              var img = e.coverImg
+              console.log(img)
+              $('.img').attr("src", e.coverImg);
+            }
+          })
+        },
+        error: function (error) {
+          console.log(error);
+        }
+      });
+    }
+
+    //点击收藏事件
+    let index = 1
+    $(".icon-shoucang1").click(function () {
+      index++;
+      console.log(index)
+      if (index % 2 == 0) {
+        $(this).css({
+          color: "#ecb067"
+        })
+      } else {
+        $(this).css({
+          color: "#333"
+
+        })
+      }
+    })
+
+
+    //点击加入购物车
+    var url = location.search; //获取url中"?"符后的字串 ('?modFlag=business&role=1')  
+    var theRequest = new Object();
+    if (url.indexOf("?") != -1) {
+      var str = url.substr(1); //substr()方法返回从参数值开始到结束的字符串；  
+      var strs = str.split("&");
+      for (var i = 0; i < strs.length; i++) {
+        theRequest[strs[i].split("=")[0]] = (strs[i].split("=")[1]);
+      }
+      console.log(theRequest.id); //此时的theRequest就是我们需要的参数；  
+    }
+    var params = {
+      product: theRequest.id,
+    }
+    //弹出框
+    function timers2(text) {
+      let time2 = new Date().setSeconds(new Date().getSeconds() + 2);
+      let timer = setInterval(function () {
+        let now = new Date();
+        let s2 = time2 - now;
+        let djs2 = new Date(s2);
+        $(".tan").css("display", "block");
+        $(".tan").html(text);
+        if (djs2.getSeconds() == 0) {
+          clearInterval(timer);
+          $(".tan").css("display", "none");
+        }
+      }, 100);
+    }
+    $('.carts').click(function () {
+      if ($.cookie("token")) {
+        // console.log(111)
+        console.log(params)
+        $.ajax({
+          url: "http://localhost:3000/api/v1/shop_carts",
+          type: "post",
+          headers: {
+            authorization: 'Bearer ' + $.cookie("token"),
+          },
+          data: params,
+          success: function (res) {
+            console.log(res);
+            timers2("加入购物车成功")
+          },
+          error: function (error) {
+            console.log(error);
+          }
+        });
+        location.href = 'cart.html'
+      } else {
+        location.href = 'login.html'
+      }
+      // location.href = 'cart.html'
+    })
+    $('.buy').click(function () {
+      location.href = 'cart.html'
+    })
+  </script>
+</body>
+
+</html>

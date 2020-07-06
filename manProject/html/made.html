@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>定制页面</title>
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/made.css" />
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../fonts/iconfont.css">
+    <script>
+        window.onload = function () {
+            /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+                              为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+            getRem(375, 100)
+        };
+        window.onresize = function () {
+            getRem(375, 100)
+        };
+
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+</head>
+
+<body>
+    <header></header>
+    <section>
+        <article class="desc">
+            <figure>
+                <figcaption>
+                    <article class="touxiang"></article>
+                    <p>KiKi<br /> 资深搭配师</p>
+                </figcaption>
+                <article class="kiki">
+                    <p>毕业于闽江学院,服装设计专业,资深搭配师,多年服装行业从事背景,擅长于服装风格划分及穿搭组合技巧的运用。</p>
+                </article>
+            </figure>
+
+            <figure>
+                <figcaption>
+                    <article class="touxiang touxiang2"></article>
+                    <p>CC<br /> 服装设计师</p>
+                </figcaption>
+                <article class="kiki">
+                    <p>毕业于北京服装学院,服装设计专业,服装设计师,多年从业经验;具有敏锐的时尚嗅觉,擅于抓住流行热点。</p>
+                </article>
+            </figure>
+        </article>
+
+
+
+
+        <article class="desc" style="border-radius:10px;margin-top:0.2rem;">
+            <figure>
+                <figcaption>
+                    <article class="touxiang"></article>
+                    <p>KiKi<br /> 资深搭配师</p>
+                </figcaption>
+                <article class="kiki">
+                    <p>毕业于闽江学院,服装设计专业,资深搭配师,多年服装行业从事背景,擅长于服装风格划分及穿搭组合技巧的运用。</p>
+                </article>
+            </figure>
+
+            <figure>
+                <figcaption>
+                    <article class="touxiang touxiang2"></article>
+                    <p>CC<br /> 服装设计师</p>
+                </figcaption>
+                <article class="kiki">
+                    <p>毕业于北京服装学院,服装设计专业,服装设计师,多年从业经验;具有敏锐的时尚嗅觉,擅于抓住流行热点。</p>
+                </article>
+            </figure>
+        </article>
+    </section>
+
+    <footer>
+        <p>搭配次数: 0</p>
+        <article class="vip">加入VIP</article>
+        <article class="vip buy">购买搭配服务</article>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+nav {
+  height: 0.67rem;
+  text-align: center;
+  padding-top: 0.18rem; }
+  nav p {
+    font-size: .21rem;
+    color: #333333; }
+  nav .en {
+    color: #888; }
+
+section {
+  overflow-x: hidden;
+  overflow-y: auto; }
+  section ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    section ul li {
+      width: 1.6rem;
+      height: 2.35rem;
+      padding-bottom: 0.2rem;
+      font-size: .14rem;
+      color: #333333;
+      font-weight: bold; }
+      section ul li .ppic {
+        width: 100%;
+        height: 1.65rem;
+        overflow: hidden;
+        margin-bottom: 0.15rem;
+        text-align: center;
+        line-height: 1.65rem; }
+        section ul li .ppic img {
+          width: 100%;
+          display: inline-block;
+          vertical-align: middle; }
+      section ul li .price {
+        margin-top: 0.15rem;
+        color: #dcba8c; }

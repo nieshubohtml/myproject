@@ -1,0 +1,595 @@
+html,
+body,
+ul,
+li,
+dl,
+dt,
+dd,
+p,
+figure,
+figcaption,
+h1,
+h2,
+h3,
+h4,
+form {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    border: 0;
+}
+
+h2,
+h3,
+h1,
+h4,
+b {
+    font-weight: normal;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 0.64rem;
+    background-color: #303030;
+    /* font-size: 0.18rem; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.14rem;
+
+}
+
+header .iconfont {
+    color: #f4f0f0;
+    font-size: 0.18rem;
+}
+
+header .nav {
+    width: 2.32rem;
+    font-size: 0.18rem;
+    
+    display: flex;
+    justify-content: space-between
+}
+header .nav a{
+    color: #f4f0f0;
+}
+header .nav .active a{
+color:  #f1a03f;
+}
+/* header .nav li:hover {
+    color: #f1a03f;
+} */
+
+section {
+    flex: 1;
+    overflow: auto;
+}
+
+/* 轮播图 */
+section .banner {
+    height: 3.33rem;
+    border-bottom: 0.01rem solid #fbfbfb;
+}
+.swiper-container {
+    width: 100%;
+    height:3.43rem;
+}
+
+.swiper-slide {
+    text-align: center;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+/* .swiper-pagination{
+
+} */
+
+
+
+
+/*  end */
+
+/* 内容区域 */
+section article .txt {
+    margin: 0 0.17rem;
+}
+
+section article .txt h2 {
+    font-size: 0.14rem;
+    color: #333333;
+    font-family: "Ping Fang SC";
+    font-weight: 500;
+    margin: 0.12rem 0 0.2rem 0;
+
+}
+
+/* 价格栏 */
+article .txt .price {
+    width: 1.45rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+article .txt .price p {
+    font-size: 0.21rem;
+    color: #d5b488;
+    font-family: "Ping Fang SC";
+    font-weight: 500;
+}
+
+article .txt .price b {
+    font-size: 0.14rem;
+    color: #999999;
+    text-decoration: line-through;
+    margin-top: 0.05rem;
+
+}
+
+article .txt .price span {
+    display: inline-block;
+    font-size: 0.14rem;
+    color: #d5b488;
+    width: 0.58rem;
+    height: 0.15rem;
+    border: 0.01rem solid #d5b488;
+    border-radius: 0.15rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* 快递栏 */
+
+article .txt .express {
+    display: flex;
+    margin: 0.18rem 0 0.14rem 0;
+    justify-content: space-between;
+}
+
+article .txt .express p {
+    font-size: 0.12rem;
+    color: #999;
+}
+
+/*  vip栏 */
+article .vip {
+    height: 0.42rem;
+    background-color: #fffaf1;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.17rem;
+
+}
+
+article .vip .vip-l {
+    width: 1.96rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+article .vip .vip-l span {
+    display: block;
+    width: 0.34rem;
+    height: 0.2rem;
+    border-radius: 0.02rem;
+    background-color: #333333;
+    text-align: center;
+    font-size: 0.14rem;
+    color: #dcba8c;
+}
+
+article .vip .vip-l p {
+    font-size: 0.14rem;
+    color: #cd8829;
+    font-family: "Ping Fang SC";
+}
+
+article .vip .vip-r {
+    width: 0.48rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+article .vip .vip-r .iconfont {
+    color: #cd8829;
+    font-size: 0.14rem;
+}
+
+article .vip .vip-r p {
+
+    font-size: 0.14rem;
+    color: #cd8829;
+    font-family: "Ping Fang SC";
+}
+
+/*  右箭头 */
+/* article .vip .vip-r span{
+    margin-bottom: 1px;
+} */
+
+/*  介绍栏 包邮 无理由退换 */
+article .baoyou {
+    margin: 0 0.17rem;
+    display: flex;
+    font-size: 0.14rem;
+    justify-content: space-between;
+}
+
+article .baoyou div {
+    margin: 0.18rem 0;
+    padding-left: 0.18rem;
+    height: 0.14rem;
+}
+
+article .baoyou div:nth-child(1) {
+
+    background: url(../../img/ning/zheng.png) no-repeat center left;
+    background-size: 0.14rem;
+
+}
+
+article .baoyou div:nth-child(2) {
+    background: url(../../img/ning/zheng.png) no-repeat center left;
+    background-size: 0.14rem;
+
+}
+
+article .baoyou div:nth-child(3) {
+    background: url(../../img/ning/qian.png) no-repeat center left;
+    background-size: 0.14rem;
+
+}
+
+article .baoyou div:nth-child(4) {
+    background: url(../../img/ning/qian.png) no-repeat center left;
+    background-size: 0.14rem;
+
+}
+
+/*  规格参数栏 */
+article .parameter .iconfont {
+    color: #999;
+    font-size: 0.12rem;
+}
+
+article .parameter {
+    border-bottom: 0.1rem solid #f9f9f9;
+}
+
+article .parameter div {
+    border-bottom: 0.02rem solid #f9f9f9;
+    padding: 0 0.14rem;
+    font-size: 0.14rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 0.44rem;
+}
+
+article .parameter div h2 {
+    width: 2.58rem;
+    font-size: 0.14rem;
+    color: #333;
+}
+
+article .parameter div p {
+    font-size: 0.14rem;
+    color: #999999;
+
+}
+
+/* 购买须知 */
+article .parameter aside {
+    margin-bottom: 0.02rem solid #f9f9f9;
+    padding: 0 0.14rem;
+    font-size: 0.14rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 0.44rem;
+}
+
+article .parameter aside p {
+    font-size: 0.14rem;
+    color: #999999;
+}
+
+/* 评价栏 */
+article .evaluate {
+    border-bottom: 0.1rem solid #f9f9f9;
+    padding: 0 0.14rem;
+
+}
+
+article .evaluate h2 {
+    display: flex;
+    padding: 0.25rem 0 0.17rem 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+article .evaluate h2 p {
+    font-size: 0.16rem;
+    color: #333;
+    font-weight: 500;
+
+}
+
+article .evaluate h2 b {
+    font-size: 0.14rem;
+    color: #f1a03f;
+}
+
+article .evaluate h2 b span {
+    margin-left: 0.08rem;
+}
+
+article .evaluate .iconfont {
+    color: #f1a03f;
+    font-size: 0.12rem;
+}
+
+/* 评价标签  */
+article .evaluate .boxs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+article .evaluate .boxs div:nth-child(1) {
+    width: 1.07rem;
+    height: 0.24rem;
+    border-radius: 0.12rem;
+    background-color: #ffedeb;
+    font-size: 0.12rem;
+    color: #666;
+    text-align: center;
+    line-height: 0.24rem;
+}
+
+article .evaluate .boxs div:nth-child(2) {
+    width: 1.3rem;
+    height: 0.26rem;
+    border-radius: 0.13rem;
+    background-color: #ffedeb;
+    font-size: 0.12rem;
+    color: #666;
+    text-align: center;
+    line-height: 0.24rem;
+}
+
+article .evaluate .boxs div:nth-child(3) {
+    width: 0.91rem;
+    height: 0.24rem;
+    border-radius: 0.12rem;
+    background-color: #ffedeb;
+    font-size: 0.12rem;
+    color: #666;
+    text-align: center;
+    line-height: 0.24rem;
+}
+
+/*  用户评价 头像 */
+article .evaluate .photo .photo_box span img {
+    width: 100%;
+    height: 100%;
+}
+
+article .evaluate .photo {
+    margin: 0.14rem 0;
+    height: 0.76rem;
+}
+
+article .evaluate .photo .photo_box {
+    /* width: 0.32rem; */
+    height: 0.32rem;
+    font-size: 0.14rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.12rem;
+
+}
+
+article .evaluate .photo .photo_box span {
+    width: 0.32rem;
+    height: 0.32rem;
+    display: block;
+    border-radius: 0.16rem;
+    background-color: #d8d8d8;
+}
+
+article .evaluate .photo .photo_box b {
+    font-size: 0.14rem;
+    color: #999;
+    margin-left: 0.1rem;
+}
+
+article .evaluate .photo p {
+    /* width:3.16rem; */
+    font-size: 0.14rem;
+    color: #333;
+}
+
+/*  有时又一 */
+
+article .youyi {
+    padding: 0 0.14rem;
+    border-bottom: 0.1rem solid #f9f9f9;
+}
+
+article .youyi .y_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.15rem 0;
+}
+
+article .youyi .y_top p {
+    font-size: 0.16rem;
+    color: #333333;
+    font-family: "Ping Fang SC";
+    font-weight: 500;
+}
+
+article .youyi .y_top span {
+    width: 0.92rem;
+    height: 0.24rem;
+    border-radius: 0.12rem;
+    /* background-color: #000000; */
+    border: 0.01rem solid #f1a03f;
+    display: block;
+    font-size: 0.14rem;
+    color: #f1a03f;
+    font-family: "Ping Fang SC";
+    text-align: center;
+    line-height: 0.24rem;
+}
+
+article .youyi .y_bottom {
+    margin-bottom: 0.14rem;
+    display: flex;
+}
+
+article .youyi .y_bottom img {
+
+    height: 0.4rem;
+}
+
+article .youyi .y_bottom p {
+    width: 2.3rem;
+    font-size: 0.14rem;
+    color: #333333;
+    font-family: "Ping Fang SC";
+    margin-left: 0.25rem;
+}
+
+/* 半张照片 */
+article .pictrue {
+    margin: 0 0.14rem;
+    padding-top:0.14rem;
+}
+
+article .pictrue img {
+    width: 100%;
+    height: 100%;
+}
+
+/*   底部栏 */
+footer {
+    height: 0.48rem;
+    background: #fff;
+    padding: 0 0.16rem;
+    display: flex;
+    justify-content: space-between;
+    border-top: 0.01rem solid #eaeaea;
+    align-items: center;
+}
+
+footer .left {
+    font-size: 0.12rem;
+    display: flex;
+    width: 1.3rem;
+    justify-content: space-between;
+}
+
+footer .left h2 {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    position: relative;
+}
+
+footer .left h2 .iconfont {
+    font-size: 0.25rem;
+    color: #333;
+}
+
+footer .left h2 p {
+    font-size: 0.12rem;
+}
+
+/*  购物车小圆点 */
+.left .yuan {
+    width: 0.14rem;
+    height: 0.14rem;
+    border-radius: 50%;
+    display: block;
+    background: #f04444;
+    font-size: 0.12rem;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0.27rem;
+}
+
+footer .right {
+    font-size: 0.14rem;
+    display: flex;
+    text-align: center;
+}
+
+footer .right div:nth-child(1) {
+    width: 0.91rem;
+    height: 0.33rem;
+    border: 0.01rem solid #333;
+    line-height: 0.33rem;
+    font-size: 0.14rem;
+    color: #cd8829;
+    border-top-left-radius: 0.17rem;
+    border-bottom-left-radius: 0.17rem;
+}
+
+footer .right div:nth-child(2) {
+    width: 0.91rem;
+    height: 0.33rem;
+    border: 0.01rem solid #333;
+    background: #333;
+    line-height: 0.33rem;
+    font-size: 0.14rem;
+    color: #cd8829;
+    border-top-right-radius: 0.17rem;
+    border-bottom-right-radius: 0.17rem;
+}
+figure{
+    height:4.5rem;
+}

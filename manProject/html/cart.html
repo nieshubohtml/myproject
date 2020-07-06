@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>购物车</title>
+  <link rel="stylesheet" href="../css/common-93.css" />
+  <link rel="stylesheet" href="../css/cart.css" />
+  <link rel="stylesheet" href="../fonts/iconfont.css" />
+  <script src="../js/rem.js"></script>
+</head>
+
+<body>
+  <header>
+    <span class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu- back"
+      style="color:aliceblue;font-size: 0.2rem;"></span>
+    <h2>购物车</h2>
+    <p class='del'>编辑</p>
+  </header>
+
+  <section>
+    <p class="tan"
+      style="z-index:999;width: 1.5rem;height:0.3rem;background: #000;position: absolute;top:40%;left:30%;color: white;text-align: center;line-height: 0.3rem;font-size: 0.12rem;display: none;">
+    </p>
+    <div class="shop-id">
+      <div class="shop-a checkAll">
+        <input type="checkbox" />
+        Clamisgold
+      </div>
+      <span class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-1"></span>
+    </div>
+
+    <div id="goods-box">
+      <div class="goods">
+        <div class="shop-a">
+          <p class='deleted' style="font-size:0.2rem;color:red">删除</p>
+        </div>
+        <img
+          src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i1/2200613890368/O1CN01R5VW3A1EaaJXtgOTc_!!2200613890368.jpg_580x580Q90.jpg_.webp" />
+        <div class="goods-b">
+          <h3>
+            维多利亚少女文胸无钢圈小胸内衣女聚拢美背性感蕾丝套装法式胸罩
+          </h3>
+          <span>绿色 2xl</span>
+          <div class="goods-end">
+            <div class="page"><i class='reduce'>-</i><b class='num'>1</b><i class='add'>+</i></div>
+            <div class="jg">￥136.00</div>
+          </div>
+        </div>
+      </div>
+      <div class="goods">
+        <div class="shop-a">
+          <input type="checkbox" />
+        </div>
+        <img
+          src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i1/2200613890368/O1CN01R5VW3A1EaaJXtgOTc_!!2200613890368.jpg_580x580Q90.jpg_.webp" />
+        <div class="goods-b">
+          <h3>
+            维多利亚少女文胸无钢圈小胸内衣女聚拢美背性感蕾丝套装法式胸罩
+          </h3>
+          <span>绿色 2xl</span>
+          <div class="goods-end">
+            <div class="page"><i>-</i><b>1</b><i>+</i></div>
+            <div class="jg">￥136.00</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <article>
+    <div class="left-end">
+      <div class="shop-a checkAll">
+        <span class="iconfont icon-duihao2"></span>
+        <input type="checkbox" />
+        全选
+      </div>
+      <div class="nsb">
+        <i>合计：￥<i class='demo'>0</i></i>
+        <span>不含运费</span>
+      </div>
+    </div>
+    <div class="right-end">
+      结算
+    </div>
+  </article>
+  <footer>
+    <figure>
+      <a href="inde.html">
+        <span class="iconfont icon-shouye"></span>
+        <figcaption>首页</figcaption>
+      </a>
+    </figure>
+    <figure>
+      <a href="jingxuan.html">
+        <span class="iconfont icon-iconset0219"></span>
+        <figcaption>精选</figcaption>
+      </a>
+    </figure>
+    <figure>
+      <a href="classify.html">
+        <span class="iconfont icon-fenlei"></span>
+        <figcaption>分类</figcaption>
+      </a>
+    </figure>
+    <figure>
+      <a href="cart.html" style="color: #ecb067;">
+        <span class="iconfont icon-buoumaotubiao01"></span>
+        <figcaption>购物车</figcaption>
+      </a>
+    </figure>
+    <figure>
+      <a href="myset.html">
+        <span class="iconfont icon-wode"></span>
+        <figcaption>我的</figcaption>
+      </a>
+    </figure>
+  </footer>
+  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery-cookie/1.4.0/jquery.cookie.js"></script>
+  <script>
+    //拼内容
+    let url = `http://localhost:3000/api/v1/shop_carts`;
+    let htm = ``;
+    let count = 0;
+    if (!$.cookie("token")) {
+      // console.log(111)
+      location.href = 'login.html'
+    }
+    $('.back').click(function () {
+      window.history.go(-1);
+    })
+    $.ajax({
+      url: url,
+      type: "get",
+      headers: {
+        authorization: 'Bearer ' + $.cookie("token"),
+      },
+      success: function (res) {
+        console.log(res);
+        cartlist = res;
+        $(res).each(function (i, v) {
+          console.log(v);
+          htm += `
+                    <div class='goods'>
+                        <div class='shop-a clickDel'>
+                            <input class='goend' type="checkbox">
+                        </div>
+                        <img src="${v.product.coverImg}">
+                        <div class='goods-b'>
+                            <h3>${v.product.descriptions}</h3>
+                            <span>白色&nbsp;xl</span>
+                            <div class='goods-end'>
+                                <div class='page'>
+                                  <i class='reduce'>-</i><b class='num'>${v.quantity}</b><i class='add'>+</i>
+                                </div>
+                                <div class='jg'>￥${v.product.price}</div>
+                            </div>
+                        </div>
+                    </div>
+                    `;
+        });
+        $("#goods-box").html(htm);
+        btns()
+        aadd()
+        rreduce()
+        goEnd()
+      },
+      error: function (err) {
+        console.log(err);
+        location.href = 'login.html'
+      }
+    });
+
+    //点击加
+    function aadd() {
+      var add = document.querySelectorAll('.add')
+      var num = document.querySelectorAll('.num')
+      for (let i = 0; i < cartlist.length; i++) {
+        x = 1
+        $(add[i]).click(function () {
+          x++;
+          // console.log()
+          // $.ajax({
+          //   url: "http://localhost:3000/api/v1/shop_carts",
+          //   type: "post",
+          //   headers: {
+          //     authorization: 'Bearer ' + $.cookie("token"),
+          //   },
+          //   data: {
+          //     product: cartlist[i].product._id,
+          //   },
+          //   success: function (res) {
+          //     console.log(res);
+          //   },
+          //   error: function (error) {
+          //     console.log(error);
+          //   }
+          // });
+          $(num[i]).html(x)
+        })
+      }
+    }
+    //点击减
+    function rreduce() {
+      var reduce = document.querySelectorAll('.reduce')
+      var num = document.querySelectorAll('.num')
+      for (let i = 0; i < cartlist.length; i++) {
+        x = 1
+        $(reduce[i]).click(function () {
+          x--;
+          if (x < 1) {
+            timers2('亲，不能再减了')
+            x = 1
+            return
+          }
+          $(num[i]).html(x)
+        })
+      }
+    }
+
+    //点击删除事件
+    let index = 1
+    $(".del").click(function () {
+      index++;
+      console.log(index)
+      if (index % 2 == 0) {
+        var res = `<p class='deleted' style="font-size:0.2rem;color:red">删除</p>`
+        $('.clickDel').html(res)
+        del()
+      } else {
+        var res = `<input type="checkbox" />`
+        $('.clickDel').html(res)
+        btns()
+      }
+    })
+
+
+
+    //总价
+    function showprice(trs) {
+      let count = 0;
+      let checkSmall = document.querySelectorAll("#goods-box .shop-a input");
+      console.log(checkSmall)
+      let page = document.querySelectorAll(".page b");
+      let parice = document.querySelectorAll(".jg");
+
+      for (let i = 0; i < trs.length; i++) {
+        var kk = parice[i].innerHTML.slice(1);
+        // console.log(parice[i].innerHTML.slice(1))
+        if (checkSmall[i].checked == true) {
+          count += kk * Number(page[i].innerHTML);
+        }
+      }
+      $(".nsb i").html(`合计：￥<i class='end'>${count}</i>`);
+    }
+
+    function btns() {
+      //全选按钮
+      $(".checkAll").on("click", "input", function () {
+        let checkAll = this.checked;
+        $(".shop-a input").each(function (i, v) {
+          v.checked = checkAll;
+        });
+        let goods = document.querySelectorAll(".goods");
+        showprice(goods);
+      });
+
+      //单选按钮
+      let One = document.querySelectorAll("#goods-box .shop-a input");
+      $("#goods-box .shop-a input").on("click", function () {
+        $(".checkAll input").each(function (i, v) {
+          v.checked = [...One].every(function (e) {
+            return e.checked;
+          });
+        });
+        let goods = document.querySelectorAll(".goods");
+        showprice(goods);
+      });
+    }
+
+    //弹出框
+    function timers2(text) {
+      let time2 = new Date().setSeconds(new Date().getSeconds() + 2);
+      let timer = setInterval(function () {
+        let now = new Date();
+        let s2 = time2 - now;
+        let djs2 = new Date(s2);
+        $(".tan").css("display", "block");
+        $(".tan").html(text);
+        if (djs2.getSeconds() == 0) {
+          clearInterval(timer);
+          $(".tan").css("display", "none");
+        }
+      }, 100);
+    }
+    // 删除购物车
+    function del() {
+      var dele = document.querySelectorAll('.deleted')
+      for (let i = 0; i < cartlist.length; i++) {
+        $(dele[i]).click(function () {
+          console.log(cartlist[i]._id)
+          var a = cartlist[i]._id
+          $.ajax({
+            url: "http://localhost:3000/api/v1/shop_carts/" + a,
+            type: "delete",
+            headers: {
+              authorization: 'Bearer ' + $.cookie("token"),
+            },
+            success: function (res) {
+              console.log(res);
+              timers2('删除成功')
+              location.reload()
+            },
+            error: function (err) {
+              console.log(err);
+            }
+          });
+        })
+      }
+
+    }
+    //点击结算
+    function goEnd() {
+      var goend = document.querySelectorAll('.goend')
+      var num = document.querySelectorAll('.num')
+      var list = []
+      for (let i = 0; i < cartlist.length; i++) {
+        $(goend[i]).click(function () {
+          console.log(cartlist[i]._id)
+          var a = cartlist[i]._id
+          var good = {
+            quantity: JSON.parse($(num[i]).html()),
+            price: cartlist[i].product.price,
+            product: cartlist[i]._id
+          }
+          if (this.checked) {
+            list.push(good)
+          } else {
+            list.pop()
+          }
+          console.log(list)
+          $.cookie('list', JSON.stringify(list));
+        })
+      }
+    }
+
+
+    //点击结算
+    $('.right-end').click(function () {
+      if ($('.demo').html() == 0) {
+        timers2('请选择商品')
+        return
+      }
+      console.log(JSON.parse($.cookie('list')))
+      $.ajax({
+        url: "http://localhost:3000/api/v1/orders",
+        type: "post",
+        // traditional: true,
+        headers: {
+          authorization: 'Bearer ' + $.cookie("token"),
+        },
+        data: {
+          receiver: '聂曙博',
+          regions: '收货的省市区县',
+          address: '收货地址',
+          orderDetails: $.cookie('list')
+        },
+        success: function (res) {
+          console.log(res);
+          location.href = 'end.html?price=' + $('.end').html()
+        },
+        error: function (err) {
+          console.log(err);
+        }
+      });
+      console.log($('.end').html())
+
+    })
+  </script>
+</body>
+
+</html>

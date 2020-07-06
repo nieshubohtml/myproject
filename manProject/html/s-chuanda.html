@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页穿搭</title>
+
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/s-chuanda.css" />
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../fonts/iconfont.css">
+    <style>
+        .cd {
+            color: #e48e1e;
+            border-bottom: 0.01rem solid #e48e1e;
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+                              为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+            getRem(375, 100)
+        };
+        window.onresize = function () {
+            getRem(375, 100)
+        };
+
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <article class="head" style="width: 95%;">
+            <p>阅读</p>
+            <span class="iconfont icon-fangdajing"></span>
+        </article>
+    </header>
+    <nav>
+        <ul>
+            <li>精选</li>
+            <li class="cd">穿搭</li>
+            <li>流行</li>
+            <li>好物</li>
+            <li>发型</li>
+            <li>生活</li>
+
+        </ul>
+    </nav>
+    <section>
+
+        <article class="box">
+            <div class="tbox">
+                <div class="tlb tb">
+                    <img src="../img/cdb.png" alt="">
+                </div>
+                <div class="trb tb">
+                    <div class="word">
+                        <p>每 日 搭 配 | 夏 季 新 品</p>
+                        <p>FASHION MIX NEW ARRI</p>
+                    </div>
+                    <div class="bpic">
+                        <img src="../img/y.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="bbox">
+                <p>可乐tee的街头诠释</p>
+                <p class="yd">阅读:6225 <time>08月06日</time></p>
+            </div>
+
+        </article>
+
+
+        <article class="box">
+            <div class="tbox">
+                <div class="tlb tb">
+                    <img src="../img/jn.png" alt="">
+                </div>
+                <div class="trb tb">
+                    <div class="word">
+                        <p>每 日 搭 配 | 夏 季 新 品</p>
+                        <p>FASHION MIX NEW ARRI</p>
+                    </div>
+                    <div class="bpic">
+                        <img src="../img/y2.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="bbox">
+                <p>时尚与功能相结合的机能运动风</p>
+                <p class="yd">阅读:6225 <time>08月06日</time></p>
+            </div>
+
+        </article>
+    </section>
+
+    <footer>
+        <ul>
+            <li>
+                <p class="iconfont icon-shouye"></p>首页
+            </li>
+            <li>
+                <p class="iconfont icon-iconset0219"></p>精选
+            </li>
+            <li>
+                <p class="iconfont icon-fenlei"></p>分类
+            </li>
+            <li>
+                <p class="iconfont icon-buoumaotubiao01"></p>购物车
+            </li>
+            <li>
+                <p class="iconfont icon-wode"></p>我的
+            </li>
+
+        </ul>
+    </footer>
+</body>
+
+</html>

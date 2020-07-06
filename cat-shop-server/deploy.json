@@ -1,0 +1,22 @@
+{
+  "apps": [{
+    "name": "cat-shop-api",
+    "script": "./app.js",
+    "env": {
+      "PORT": 3009
+    }
+  }],
+  "deploy": {
+    "production": {
+      "user": "ylweb",
+      "host": [{
+        "host": "120.26.71.58",
+        "port": "2002"
+      }],
+      "ref": "origin/master",
+      "repo": "git@github.com:btc022003/cat-shop-server.git",
+      "path": "/yl_data/website/cat-shop-app/server-api",
+      "post-deploy": "npm i && pm2 startOrRestart deploy.json --env production"
+    }
+  }
+}

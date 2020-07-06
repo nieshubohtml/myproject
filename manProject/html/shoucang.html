@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的收藏</title>
+
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/shoucang.css" />
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../fonts/iconfont.css">
+    <script>
+        window.onload = function () {
+            /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+                              为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+            getRem(375, 100)
+        };
+        window.onresize = function () {
+            getRem(375, 100)
+        };
+
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <article class="head" style="width: 60%;">
+            <span class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu- fh"></span>
+            <p>我的收藏</p>
+        </article>
+    </header>
+    <nav>
+        <ul>
+            <li>商品</li>
+            <li>品牌</li>
+            <li style='color:#f1a03f'>文章</li>
+
+        </ul>
+    </nav>
+    <section>
+        <article class="shop">
+            <div class="pic"></div>
+            <p>比驱蚊水好用1000倍的驱蚊黑科技神物</p>
+
+            <span>阅读：2080</span>
+            <span class="time">6月21日</span>
+
+        </article>
+
+        <article class="shop">
+            <div class="pic2"></div>
+            <p>夏季变白好物分享！</p>
+
+            <span>阅读：280</span>
+            <span class="time">6月15日</span>
+
+        </article>
+
+        <article class="shop">
+            <div class="pic3"></div>
+            <p>夏季变白好物分享！</p>
+
+            <span>阅读：200</span>
+            <span class="time">6月2日</span>
+
+        </article>
+    </section>
+
+    <script>
+        var span = document.querySelector('.fh')
+        span.onclick = function(){
+            location.href = 'myset.html'
+        }
+    </script>
+</body>
+
+</html>

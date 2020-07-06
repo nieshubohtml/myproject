@@ -1,0 +1,68 @@
+header {
+  height: 2.4rem;
+  background: url(../img/BED949B5C5C9F98AEE715366F145C098.png) no-repeat center/cover; }
+
+footer {
+  height: 0.5rem;
+  background: #f7f7f7;
+  border-top: 1px solid #ccc; }
+
+section {
+  background: #f7f7f7; }
+  section .desc {
+    width: 3.44rem;
+    height: 3.1rem;
+    background: white;
+    border-radius: 0 0 10px 10px;
+    margin: 0 auto;
+    padding-top: 0.2rem; }
+    section .desc figure {
+      padding: 0 0.35rem 0.4rem 0.3rem;
+      height: 1.15rem;
+      width: calc(100% - 0.65rem); }
+      section .desc figure figcaption {
+        display: block;
+        width: 1.4rem;
+        height: 0.55rem; }
+        section .desc figure figcaption p {
+          font-size: 0.16rem;
+          color: #333;
+          font-weight: 500;
+          float: right;
+          line-height: 0.2rem;
+          margin-top: 0.1rem; }
+        section .desc figure figcaption .touxiang {
+          width: 0.55rem;
+          height: 0.55rem;
+          border-radius: 50%;
+          background: url(../img/kiki.png) no-repeat center/cover;
+          float: left; }
+        section .desc figure figcaption .touxiang2 {
+          background: url(../img/CC.png) no-repeat center/cover; }
+      section .desc figure .kiki {
+        width: 2.9rem;
+        height: .51rem;
+        font-size: 0.12rem;
+        letter-spacing: 0.01rem;
+        color: #333;
+        line-height: 0.15rem;
+        margin-top: 0.2rem; }
+
+footer {
+  font-size: 0.14rem;
+  letter-spacing: 0.02rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+  footer .vip {
+    width: 0.82rem;
+    height: 0.3rem;
+    border-radius: 4px;
+    background-color: #333;
+    line-height: 0.3rem;
+    text-align: center;
+    letter-spacing: 0.02rem;
+    color: #c98629; }
+  footer .buy {
+    width: 1.2rem; }

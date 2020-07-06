@@ -1,0 +1,218 @@
+/* 重置样式 */
+body,
+form,
+img,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+dl,
+dt,
+dd,
+a,
+figure,
+figcaption,
+form,
+input {
+    margin: 0;
+    padding:0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    font-size: 26.667vw
+}
+body,
+html {
+    height: 100%
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+  }
+
+header{
+    height:1.98rem;
+    background: #303030;
+}
+header .set{
+    height:0.43rem;
+    font-size:0.19rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0 0.14rem;
+}
+header .set span{
+    color: #f4efef;
+    font-size:0.19rem;
+    margin-left:0.2rem;
+}
+
+header .myImage{
+    height:0.78rem;
+    display: flex;
+    justify-content: center;
+}
+header .myImage img{
+    width:0.59rem;
+    height:0.59rem;
+    border-radius: 50%;
+}
+header .Image {
+    font-size: 0.2rem;
+    color: #f4f0f0;
+    height:0.56rem;
+    margin-left:0.17rem;
+}
+header .Image h3{
+    font-weight: normal;
+}
+
+header .Image span{
+    font-size:0.14rem;
+}
+header .Image h3 span{
+    margin-left: 0.12rem;
+}
+
+header .boxs{
+    height:0.65rem;
+    background:#fff;
+    margin: 0.5rem 0.14rem 0;
+}
+
+
+
+section{
+    flex: 1;
+    overflow: auto;
+}
+.boxs  .order{
+    padding:0 0.14rem;
+    background: #fff;
+    position: relative;
+    top:-0.5rem;
+    border-radius: 8px;
+    box-shadow: 0.707px 0.707px 5px
+}
+.boxs  .order .title{
+    display: flex;
+    justify-content: space-between;
+    padding-top:0.25rem;
+    padding-bottom: 0.1rem;
+    border-bottom:1px solid rgba(51,51,51,0.05);
+    align-items: center;
+}
+.boxs .title   h3{
+    font-size:0.14rem;
+}
+.boxs .title  span{
+    font-size:0.12rem;
+    color: #333;
+}
+.boxs .title  .iconfont{
+    font-size:0.01rem;
+}
+
+
+.boxs nav {
+    height:0.74rem;
+    display: flex;
+    justify-content: space-between;
+    padding-top:0.1rem;
+}
+.boxs nav figure{
+    font-size:0.2rem;
+    text-align: center;
+}
+.boxs nav figure .iconfont{
+    font-size:0.2rem;
+}
+.boxs nav figcaption{
+    font-size:0.12rem;
+}
+
+
+section  .box01{
+    height:0.36rem;
+    border-radius: 18px;
+    background:#f1a03f;
+    margin: 0.75rem 0.14rem 0.25rem;
+    font-size:0.14rem;
+    text-align: center;
+    line-height: 0.36rem;
+    color: #fefffe;
+}
+.box01 .iconfont{
+    font-size:0.2rem;
+    padding-right:0.17rem; 
+}
+
+
+
+section article{
+    height:0.42rem;
+    border-bottom:1px solid rgba(51,51,51,0.050980392156862744);
+    font-size:0.12rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.14rem;
+}
+section article p{
+    font-size: 0.12rem;
+    color: #333333;
+    display: flex;
+    align-items: center;
+}
+section article .iconfont{
+    font-size:0.1rem;
+}
+
+
+
+
+
+
+
+
+
+/* 底部 */
+footer {
+    height:0.5rem;
+    border-top:1px solid #eeeeee;
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.12rem;
+    text-align: center;
+    align-items: center;
+}
+footer  figure  .iconfont{
+    font-size:0.2rem;
+}
+footer figure a{
+    color: #333333;
+    font-family: "Ping Fang SC";
+}
+
+footer figure a:hover{
+    color:#ecb067
+}

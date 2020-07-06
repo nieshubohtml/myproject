@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>收货</title>
+
+    <link rel="stylesheet" href="../fonts/iconfont.css" />
+    <link rel="stylesheet" href="../css/ydui.css">
+    <!-- <link rel="stylesheet" href="../css/shouhuo.css" /> -->
+    <link rel="stylesheet" href="../css/demo.css">
+    <script src="https://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-cookie/1.4.0/jquery.cookie.js"></script>
+    <script src="../js/ydui.flexible.js"></script>
+</head>
+
+<body>
+    <p class="tan"
+        style="width: 3.5rem;height:1rem;background: #000;position: absolute;top:40%;left:30%;color: white;text-align: center;line-height: 1rem;font-size: 0.3rem;display: none;">
+    </p>
+    <header style="height:1rem;
+  display: flex;
+  font-size:0.3rem;
+  background: #303030;
+  color: #f4f0f0;
+  align-items: center;
+  justify-content: space-between;
+  padding:0 0.14rem;">
+        <span class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu- fh">
+        </span>
+        <h3 style="font-size: 0.4rem;
+    font-weight: normal;">
+            收货信息管理
+        </h3>
+        <span class="btn">
+            添加
+        </span>
+    </header>
+
+    <section class='adrs' style="  flex: 1;
+  overflow: auto;">
+        <figure style='height: 2rem;
+    padding:0 0.24rem;
+    border-top: 0.02rem solid #d8d8d8;
+    border-bottom: 0.02rem solid #d8d8d8;'>
+            <figcaption
+                style='height:1rem;font-size: 0.3rem;display: flex;justify-content: space-between;line-height: 1rem;'>
+                <div>聂曙博</div>
+                <div>15639952243</div>
+            </figcaption>
+            <figcaption style='font-size: 0.3rem;'>
+                <div>河南省阿斯达四大多</div>
+            </figcaption>
+        </figure>
+        <div style="font-size:0.3rem;width: 100%;display: flex;justify-content: center;">删除</div>
+    </section>
+    <script>
+        // 发请求
+        $.ajax({
+            url: "http://localhost:3000/api/v1/addresses",
+            type: "get",
+            // traditional: true,
+            headers: {
+                authorization: 'Bearer ' + $.cookie("token"),
+            },
+            data: {
+            },
+            success: function (res) {
+                console.log(res);
+                var arrs = res.addresses
+                var a = ''
+                arrs.forEach((e, index) => {
+                    a += `
+                <figure style='height: 2rem;
+    padding:0 0.24rem;
+    border-top: 0.02rem solid #d8d8d8;
+    border-bottom: 0.02rem solid #d8d8d8;'>
+            <figcaption
+                style='height:1rem;font-size: 0.3rem;display: flex;justify-content: space-between;line-height: 1rem;'>
+                <div>${e.receiver}</div>
+                <div>${e.mobile}</div>
+            </figcaption>
+            <figcaption style='font-size: 0.3rem;'>
+                <div>${e.regions}${e.address}</div>
+            </figcaption>
+        </figure>
+        <div class='del' style="font-size:0.3rem;width: 100%;display: flex;justify-content: center;">删除</div>
+                `
+                    $('.adrs').html(a)
+                })
+                del(arrs)
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+
+
+        //弹窗
+        function timers2(text) {
+            let time2 = new Date().setSeconds(new Date().getSeconds() + 2);
+            let timer = setInterval(function () {
+                let now = new Date();
+                let s2 = time2 - now;
+                let djs2 = new Date(s2);
+                $(".tan").css("display", "block");
+                $(".tan").html(text);
+                if (djs2.getSeconds() == 0) {
+                    clearInterval(timer);
+                    $(".tan").css("display", "none");
+                }
+            }, 100);
+        }
+
+        var span = document.querySelector(".fh");
+        span.onclick = function () {
+            location.href = "myset.html";
+        };
+        $('.btn').click(function () {
+            // console.log($('#J_Address').val())
+            window.location.href = "shouhuo.html";
+        })
+        // 删除地址
+        function del(a) {
+            var dele = document.querySelectorAll('.del')
+            var arr = a
+            for (let i = 0; i < arr.length; i++) {
+                $(dele[i]).click(function () {
+                    console.log(arr[i]._id)
+                    var a = arr[i]._id
+                    $.ajax({
+                        url: "http://localhost:3000/api/v1/addresses/" + a,
+                        type: "delete",
+                        headers: {
+                            authorization: 'Bearer ' + $.cookie("token"),
+                        },
+                        success: function (res) {
+                            console.log(res);
+                            timers2('删除成功')
+                            location.reload()
+                        },
+                        error: function (err) {
+                            console.log(err);
+                        }
+                    });
+                })
+            }
+
+        }
+        $('.del').click(function () {
+            $.ajax({
+                url: "http://localhost:3000/api/v1/addresses/",
+                type: "get",
+                // traditional: true,
+                headers: {
+                    authorization: 'Bearer ' + $.cookie("token"),
+                },
+                data: {
+                },
+                success: function (res) {
+                    console.log(res);
+                },
+                error: function (err) {
+                    console.log(err);
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+body,
+form,
+img,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+dl,
+dt,
+dd,
+a,
+figure,
+figcaption,
+form,
+input {
+    margin: 0;
+    padding:0;
+}
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    font-size: 26.667vw
+}
+body,
+html {
+    height: 100%
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 头部 */
+header{
+    display: flex;
+    height:0.64rem;
+    background-color: #303030;
+    font-size: 0.18rem;
+    color: #f4f0f0;
+    align-items: center;
+    padding: 0 0.14rem;
+    justify-content: space-between;
+}
+header h2{
+    font-weight: normal;
+    font-size: 0.18rem;
+}
+header .iconfont{
+    font-size:0.16rem;
+}
+
+section{
+    flex: 1;
+    overflow: auto;
+}
+
+/* 状态栏 */
+section nav{
+    height:0.4rem;
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    padding:0 0.14rem;
+}
+section nav figure{
+    flex-shrink: 0;
+    font-size:0.14rem;
+    padding-right:0.4rem;
+}
+section nav figure a{
+    color: #333333;
+}
+section nav figure span {
+    display: block;
+    margin-top:0.02rem;
+    height: 0.01rem;
+    background: #fff;
+}
+nav figure:hover a{color:#eda852}
+nav figure:hover span{background: #eda852;}
+
+article{
+    height:0.1rem;
+    background-color: #eeeeee;
+}
+
+/* 内容 */
+section .passage{
+    height:1.55rem;
+    padding: 0 0.14rem;
+}
+section .passage .title-a{
+    height:0.4rem;
+    font-size: 0.14rem;
+    color: #333333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section .passage .title-a span{
+    margin-left: 0.15rem;
+}
+section .title-a p:nth-of-type(2){
+    color: #f1a03f;
+}
+section .passage-a{
+    display: flex;
+}
+section .passage-b{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding:0.04rem 0 0.16rem 0.17rem;
+}
+
+section img{
+    width: 1.07rem;
+    height:1.02rem;
+    border-radius: 5px;
+}
+.passage-b p {
+    font-size: 0.11rem;
+    color: #868080;
+    margin-bottom:0.24rem;
+    margin-top:0.1rem;
+}
+.passage-b p span:nth-of-type(2){
+    margin: 0 0.1rem;
+}
+.passage h3{
+    font-size:0.14rem;
+    color: #333333;
+    font-weight: normal;
+    display: flex;
+    justify-content: space-between;
+}
+
+section nav::-webkit-scrollbar {display:none}
+
+
+section  .click{
+    height: 2px;
+    background-color: #eeeeee;
+}
+
+/* 订单选项 */
+section .Pay{
+    height:0.45rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.Pay p{
+    display: block;
+    width: 0.74rem;
+    height:0.26rem;
+    border-radius:0.5rem;
+    font-size:0.14rem;
+    text-align: center;
+    line-height: 0.26rem;
+}
+.Pay p:nth-of-type(1){
+    border: 1px solid #333;
+    color: #333333;
+    margin:0 0.13rem;
+}
+.Pay p:nth-of-type(2){
+    background: #f1a03f;
+    border: 1px solid #f1a03f;
+    color:#fff;
+    margin:0 0.13rem;
+}
