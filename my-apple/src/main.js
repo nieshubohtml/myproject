@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2022-03-15 11:05:27
+ * @LastEditTime: 2022-03-16 11:08:01
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \myproject\my-apple\src\main.js
+ */
 import Vue from 'vue'
 
 // normalize初始化html标签的基础样式，可以在不同的浏览器里样式一样
@@ -32,7 +40,7 @@ if (process.env.NODE_ENV === 'production') {
 // set ElementUI lang to EN
 Vue.use(ElementUI, { locale })
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false//报错提示，默认是true,生产环境可以改为false减小开销
 
 new Vue({
   el: '#app',

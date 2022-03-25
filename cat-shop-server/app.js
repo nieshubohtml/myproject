@@ -7,12 +7,22 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const jwtMiddle = require("express-jwt"); // 验证jwt数据
 const cors = require("cors"); // 服务器端处理跨域
+const session = require("express-session"); // 使用express-session 来存放数据到session中
 
 const { jwtSecret } = require("./utils/config");
 const { Manager } = require("./models");
 
 const app = express();
 
+app.use(
+  // 使用express-session 来存放数据到session中
+  session({
+    secret: "keyboard cat",
+    resave: false,
+    saveUninitialized: true,
+    cookie: { maxAge: 1000 * 60 * 60 },
+  })
+);
 // 请求日志输出
 app.use(logger("dev"));
 
@@ -24,7 +34,7 @@ app.engine("html", ejs.renderFile);
 // parse application/x-www-form-urlencoded
 app.use(
   bodyParser.urlencoded({
-    extended: false
+    extended: false,
   })
 );
 // parse application/json
@@ -43,9 +53,9 @@ app.use("/api/v2/proxy", require("./api/v2/proxy"));
 // 对api使用jwt权限验证
 app.use(
   jwtMiddle({
-    secret: jwtSecret
+    secret: jwtSecret,
   }).unless({
-    path: [new RegExp("/api/v1/auth/*"), new RegExp("/api/v1/common/*")]
+    path: [new RegExp("/api/v1/auth/*"), new RegExp("/api/v1/common/*")],
   })
 );
 app.all("/api/v1/admin/*", async (req, res, next) => {
@@ -59,13 +69,13 @@ app.all("/api/v1/admin/*", async (req, res, next) => {
     } else {
       res.json({
         code: "error",
-        message: "管理员账号不存在！"
+        message: "管理员账号不存在！",
       });
     }
   } catch (err) {
     res.json({
       code: "error",
-      message: "管理员账号不存在！"
+      message: "管理员账号不存在！",
     });
   }
 });
@@ -89,14 +99,14 @@ app.use("/api/v1/shop_carts", require("./api/v1/shop_carts"));
 app.use("/api/v1/orders", require("./api/v1/orders"));
 app.use("/api/v1/addresses", require("./api/v1/addresses"));
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   var err = new Error("Not Found");
   err.status = 404;
   next(err);
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err;
   res.locals.error = req.app.get("env") === "development" ? err : {};
@@ -105,7 +115,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.json({
     code: "error",
-    info: err
+    info: err,
   });
 });
 
@@ -118,7 +128,7 @@ require("./db");
 // 初始化超级管理员
 async function initManager() {
   const isExist = await Manager.count({
-    userName: "admin"
+    userName: "admin",
   });
   if (isExist == 0) {
     const slat = bcrypt.genSaltSync(10);
@@ -126,7 +136,7 @@ async function initManager() {
     const admin = new Manager({
       userName: "admin",
       password: pwd,
-      nickName: "超级管理员"
+      nickName: "超级管理员",
     });
     await admin.save();
   }

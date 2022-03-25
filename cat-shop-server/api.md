@@ -62,10 +62,24 @@ method
 params
   userName  用户名
   password  密码
+  img_code  验证码[不是必填]
 return
   {
     "code": "success",
     "token": ""
+  }
+```
+
+
+```
+url
+  /api/v1/auth/img_code
+method
+  get
+params
+return
+  {
+    验证码图片
   }
 ```
 
